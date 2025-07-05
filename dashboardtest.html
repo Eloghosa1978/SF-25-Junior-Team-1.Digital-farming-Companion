@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard | AgriKids Adventures</title>
+  <link rel="stylesheet" href="../CSS/dashboard.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+  <style>
+    body {
+      min-height: 100vh;
+    }
+    .sidebar {
+      width: 220px;
+      min-height: 100vh;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background: #198754;
+      color: #fff;
+      z-index: 1030;
+    }
+    .sidebar .nav-link {
+      color: #fff;
+    }
+    .sidebar .nav-link.active, .sidebar .nav-link:hover {
+      background: #157347;
+      color: #fff;
+    }
+    .main-content {
+      margin-left: 220px;
+      padding-top: 56px; /* Height of navbar */
+    }
+    .navbar {
+      margin-left: 220px;
+      position: fixed;
+      top: 0;
+      right: 0;
+      left: 220px;
+      z-index: 1040;
+    }
+    .sidebar-collapsed {
+      width: 60px !important;
+      transition: width 0.3s;
+    }
+    .main-content-collapsed, .navbar-collapsed {
+      margin-left: 60px !important;
+      transition: margin-left 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <!-- Sidebar -->
+  <nav class="sidebar d-none d-md-block" id="sidebar">
+    <div class="p-3">
+      <img src="../src/IMG/logo.png" alt="Logo" style="width: 100%; max-width: 180px; height: 60px;" class="mb-4">
+      <ul class="nav flex-column">
+        <li class="nav-item">
+          <a class="nav-link active" href="#"><i class="bi bi-house"></i> Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-tree"></i> My Farm</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-question-circle"></i> Quizzes</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-trophy"></i> Achievements</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="../index.html"><i class="bi bi-box-arrow-right"></i> Logout</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <button class="btn btn-success d-none d-md-block" id="sidebarToggle" style="position:fixed;top:10px;left:230px;z-index:1050;">
+  <i class="bi bi-list"></i>
+</button>
+
+  <!-- Top Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+    <div class="container-fluid">
+      <span class="navbar-brand fw-bold">Welcome, AgriKid!</span>
+      <ul class="navbar-nav ms-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-bell"></i></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><i class="bi bi-person-circle"></i></a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <main class="main-content">
+    <div class="container pt-4">
+      <h1 class="fw-bold">Dashboard</h1>
+      <p class="lead">Your farming adventure starts here!</p>
+      <!-- Add your dashboard widgets/content here -->
+    </div>
+  </main>
+
+  <script>
+        document.getElementById('sidebarToggle').addEventListener('click', function() {
+      document.getElementById('sidebar').classList.toggle('sidebar-collapsed');
+      document.querySelector('.main-content').classList.toggle('main-content-collapsed');
+      document.querySelector('.navbar').classList.toggle('navbar-collapsed');
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

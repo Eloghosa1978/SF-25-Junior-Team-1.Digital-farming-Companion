@@ -1,208 +1,202 @@
-*{
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-.nav-bg{
-    background: linear-gradient(to bottom, 
-    rgb(173, 216, 230) 0%,     /* sky blue */
-    rgb(144, 238, 144) 50%,     /* soft green */
-    hsl(60, 100%, 90%) 100%     /* light yellow */
-    );
-    color: white;
-    box-shadow: 1px 1px 10px 1px rgba(81, 81, 81, 0.637),
-                1px 1px 10px 1px rgba(81, 81, 81, 0.637),
-                1px 0.5px 20px 1px rgba(81, 81, 81, 0.637),
-                1px 1px 5px 0px rgba(81, 81, 81, 0.637
-    );
-
-    
-    
+.nav-bg {
+  background: linear-gradient(
+    to bottom,
+    rgb(173, 216, 230) 0%,
+    /* sky blue */ rgb(144, 238, 144) 50%,
+    /* soft green */ hsl(60, 100%, 90%) 100% /* light yellow */
+  );
+  color: white;
+  box-shadow: 1px 1px 10px 1px rgba(81, 81, 81, 0.637),
+    1px 1px 10px 1px rgba(81, 81, 81, 0.637),
+    1px 0.5px 20px 1px rgba(81, 81, 81, 0.637),
+    1px 1px 5px 0px rgba(81, 81, 81, 0.637);
 }
-#header{
-    position: sticky;
-    top: 1px;
-    z-index: 100;
+#header {
+  position: sticky;
+  top: 1px;
+  z-index: 100;
 }
 
 .hero {
-    background-color: rgba(77, 181, 77, 0.66);
-    background-image: url("../src/IMG/home-hero.png");
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 90vh;
-    align-content: center;
+  background-color: rgba(77, 181, 77, 0.66);
+  background-image: url("../src/IMG/home-hero.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 90vh;
+  align-content: center;
 }
-.hero > div{
-    background-image: 
-        linear-gradient(150deg, 
-        rgb(173, 216, 230),     /* sky blue */
-        rgba(144, 238, 144, 0.661),     /* soft green */
-        hsla(60, 100%, 90%, 0.622)    /* light yellow */
-    );
-    height: 100%;
-    width: 100%;
-    
+.hero > div {
+  background-image: linear-gradient(
+    150deg,
+    rgb(173, 216, 230),
+    /* sky blue */ rgba(144, 238, 144, 0.661),
+    /* soft green */ hsla(60, 100%, 90%, 0.622) /* light yellow */
+  );
+  height: 100%;
+  width: 100%;
 }
-.hero-text{
-    animation-name: herotext;
-    animation-duration: 1s;
-    animation-timing-function: ease-in;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-    animation-play-state: running;
-    align-self: center;
+.hero-text {
+  animation-name: herotext;
+  animation-duration: 1s;
+  animation-timing-function: ease-in;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-play-state: running;
+  align-self: center;
 }
 @keyframes herotext {
-    from{
-        position: relative;
-        bottom: -120px;
-        opacity: 0;
-        display: none;
-    }
-    to{
-        position: relative;
-        bottom: 0;
-        opacity: 1;
-        top: 1;
-        display: block;
-    }
+  from {
+    position: relative;
+    bottom: -120px;
+    opacity: 0;
+    display: none;
+  }
+  to {
+    position: relative;
+    bottom: 0;
+    opacity: 1;
+    top: 1;
+    display: block;
+  }
 }
-.hero-but{
-    animation-name: herotext;
-    animation-duration: 1s;
-    animation-timing-function: linear;
-    animation-fill-mode: forwards;
-    animation-direction: normal;
-    animation-delay: 0.1.5s;
+.hero-but {
+  animation-name: herotext;
+  animation-duration: 1s;
+  animation-timing-function: linear;
+  animation-fill-mode: forwards;
+  animation-direction: normal;
+  animation-delay: 0.1.5s;
 }
-.but{
-    padding: 8px 12px;
-    border: 3px solid rgba(126, 236, 126);
-    transition: all 0.3s;
-    font-weight: 600;
-    color: hsla(60, 100%, 90%) ;
-    max-width: 300px;
-
+.but {
+  padding: 8px 12px;
+  border: 3px solid hsla(60, 100%, 69%, 0.986);
+  transition: all 0.3s;
+  font-weight: 600;
+  color: hsla(60, 100%, 90%);
+  max-width: 300px;
+  font-size: 1.2rem;
 }
-.but:nth-of-type(1){
-    background-color: rgb(126, 236, 126);
-    color: white;
-    border: 3px solid rgb(126, 236, 126);
-    padding-bottom: 2px;
+.but:nth-of-type(1) {
+  background-color: hsla(60, 100%, 69%, 0.986);
+  color: rgb(0, 255, 0);
+  border: 3px solid hsla(60, 100%, 69%, 0.986);
+  padding-bottom: 2px;
+  font-size: 1.2rem;
 }
-.but:nth-of-type(1):hover{
-    border: 3px solid rgba(126, 236, 126);
-    background-color: transparent;
-}
-
-.but:nth-of-type(2):hover{
-    background-color: rgba(126, 236, 126);
-    color: white;
+.but:nth-of-type(1):hover {
+  border: 3px solid hsla(60, 100%, 69%, 0.986);
+  background-color: transparent;
+  color: hsla(60, 100%, 69%, 0.986);
 }
 
-.logo{
-    max-width: 150px;
-    height: 50px;
-    width: 80px;
+.but:nth-of-type(2):hover {
+  background-color: hsla(60, 100%, 69%, 0.986);
+  color: rgb(0, 255, 0);
+}
+
+.logo {
+  max-width: 150px;
+  height: 50px;
+  width: 80px;
 }
 
 /* Intro Section */
-.intro{
-    box-sizing: border-box;
-    background-color: rgb(173, 216, 230);
-    border-bottom: 0;
-    perspective: 1000px;
+.intro {
+  box-sizing: border-box;
+  background-color: rgb(173, 216, 230);
+  border-bottom: 0;
+  perspective: 1000px;
 }
-.circle-card{
-    box-sizing: border-box;
-    width: 200px;
-    height: 200px;
-    /* border-top-left-radius: 100px;
+.circle-card {
+  box-sizing: border-box;
+  width: 200px;
+  height: 200px;
+  /* border-top-left-radius: 100px;
     border-top-right-radius: 100px; */
-    border-radius: 50%;
-    transition: ease-in-out 1s;
-    background: linear-gradient(to left, red 50%, green 50%) right;
-    background-size: 200%;
-    transition: .5s ease-out;
-    overflow: hidden;
+  border-radius: 50%;
+  transition: ease-in-out 1s;
+  background: linear-gradient(to left, red 50%, green 50%) right;
+  background-size: 200%;
+  transition: 0.5s ease-out;
+  overflow: hidden;
 }
-.circle-card:hover{
-    /* transform: rotateX(180deg); */
-    background-position: left;
-
+.circle-card:hover {
+  /* transform: rotateX(180deg); */
+  background-position: left;
 }
-.card-background{
-    justify-self: center;
-    align-self: center;
-    width: 115.5%;
-    height: 100%;
-    text-align: center;
-    color: white;
-    background-color: blue;
-    align-content: center;
-    border-radius: 50%;
-    z-index: 1;
+.card-background {
+  justify-self: center;
+  align-self: center;
+  width: 115.5%;
+  height: 100%;
+  text-align: center;
+  color: white;
+  background-color: blue;
+  align-content: center;
+  border-radius: 50%;
+  z-index: 1;
 }
 
 a.activea {
-    color: red;
-    text-decoration: none;
-}
-    
-.circle-card-background{
-    background-color: rgb(144, 238, 144);
-    box-shadow: 1px 1px 10px 1px rgba(81, 81, 81, 0.637),
-                1px 1px 10px 1px rgba(81, 81, 81, 0.637),
-                1px 0.5px 20px 1px rgba(81, 81, 81, 0.637),
-                1px 1px 5px 0px rgba(81, 81, 81, 0.637
-    );
-}
-.circle-card-background p{
-    font-size: 1.1rem;
-    font-weight: 350;
-    color: black;
-}
-.circle-card-background .arrow{
-    font-size: 1.2rem;
-    color: white;
-}
-
-
-.row.justify-content-center {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
+  color: red;
+  text-decoration: none;
 }
 
 .circle-card-background {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    height: 100%; 
-    min-height: 320px;      
+  background-color: rgb(144, 238, 144);
+  box-shadow: 1px 1px 10px 1px rgba(81, 81, 81, 0.637),
+    1px 1px 10px 1px rgba(81, 81, 81, 0.637),
+    1px 0.5px 20px 1px rgba(81, 81, 81, 0.637),
+    1px 1px 5px 0px rgba(81, 81, 81, 0.637);
 }
 .circle-card-background p {
-    margin: 0;             
-    flex-grow: 1;          
-    text-align: center;   
- }
+  font-size: 1.1rem;
+  font-weight: 350;
+  color: black;
+}
+.circle-card-background .arrow {
+  font-size: 1.2rem;
+  color: white;
+}
+
+.row.justify-content-center {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+}
+
+.circle-card-background {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  min-height: 320px;
+}
+.circle-card-background p {
+  margin: 0;
+  flex-grow: 1;
+  text-align: center;
+}
 
 @media screen and (max-height: 1200px) {
-    .hero{
-        height: 70vh;
-    }
-    
+  .hero {
+    height: 70vh;
+  }
 }
 @media screen and (max-width: 768px) {
-    .hero{
-        height: 90vh;
-    }
-    .hero-text{
-        font-size: 1.5rem;
-    }
-    .hero-but{
-        font-size: 1rem;
-    }
+  .hero {
+    height: 90vh;
+  }
+  .hero-text {
+    font-size: 1.5rem;
+  }
+  .hero-but {
+    font-size: 1rem;
+  }
 }

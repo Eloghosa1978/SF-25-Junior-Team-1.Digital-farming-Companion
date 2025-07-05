@@ -1,135 +1,264 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dash Board | Agri kids Adventures</title>
-  <link rel="stylesheet" href="../CSS/dashboard.css">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" >
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
-</head>
-<body>
-  <header>
-    
-  </header>
-  <div class="container-fluid">
-    <div class=" bg-success sidebar-div d-md-none">
-      <button class="btn btn-outline-success d-md-none my-2 border border-light" type="button" data-bs-toggle="offcanvas" data-bs-target="#sidebarOffcanvas" aria-controls="sidebarOffcanvas">
-        <i class="bi bi-list"></i>
-      </button>
-      <div class="text-light">
-        <button class="p-2 rounded but-div text-center btn" id="but-div"><i class="bi bi-box-arrow-right h2 fw-bold text-light " ></i></button>
-      </div>      
-    </div>
-
-   <div class="row">
-      <div class="offcanvas offcanvas-start bg-success text-white" tabindex="-1" id="sidebarOffcanvas" aria-labelledby="sidebarOffcanvasLabel">
-        <div class="offcanvas-header">
-          <img class="offcanvas-title" id="sidebarOffcanvasLabel" src="../src/IMG/logo.png" style="min-width: 100px; height: 70px; max-width: 200px;"></img>
-          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dash Board | Agri kids Adventures</title>
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <!--Top Nav Section!-->
+    <header>
+      <nav class="navbar navbar-expand-md navbar-dark bg-success fixed">
+        <div class="container-fluid d-flex align-items-center">
+          <div class="d-flex">
+            <button
+              class="btn btn-success d-md-none navbar-toggler me-2"
+              type="button"
+              data-bs-toggle="offcanvas"
+              data-bs-target="#sidebarOffcanvas"
+              aria-controls="sidebarOffcanvas"
+            >
+              <i class="navbar-toggler-icon"></i>
+            </button>
+            <a class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
+              <img
+                src="../src/IMG/logo.png"
+                alt=""
+                style="width: 100px; height: 50px; max-width: 200px"
+              />
+            </a>
+          </div>
         </div>
-        <div class="offcanvas-body">
-          <ul class="nav flex-column">
-            <li class="nav-item">
-              <a class="nav-link active text-white lead" href="#"><i class="bi bi-house"></i> Dashboard</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white lead" href="#"><i class="bi bi-book"></i> Learn</a>
+      </nav>
+    </header>
+    <!--End of Top Nav Section!-->
+    <!--Sidebar Section!-->
+    <div class="container-fluid">
+      <div class="bg-success sidebar-div d-md-none">
+        <div>
+          <button class="btn"></button>
+        </div>
+        <div class="text-light">
+          <button class="p-2 rounded but-div text-center btn" id="but-div">
+            <i class="bi bi-box-arrow-right h2 fw-bold text-light"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div
+          class="offcanvas offcanvas-start bg-success text-white"
+          tabindex="-1"
+          id="sidebarOffcanvas"
+          aria-labelledby="sidebarOffcanvasLabel"
+        >
+          <div class="offcanvas-header">
+            <img
+              class="offcanvas-title"
+              id="sidebarOffcanvasLabel"
+              src="../src/IMG/logo.png"
+              style="min-width: 100px; height: 70px; max-width: 200px"
+            />
+            <button
+              type="button"
+              class="btn-close btn-close-white"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="offcanvas-body">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active text-white lead" href="#"
+                  ><i class="bi bi-house"></i> Dashboard</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white lead" href="#"
+                  ><i class="bi bi-book"></i> Learn</a
+                >
+              </li>
+
               <li class="nav-item dropdown">
-                <a class="nav-link text-white lead" data-bs-toggle="collapse" href="#learnMenu" role="button" aria-expanded="false" aria-controls="learnMenu">
-                  <i class="bi bi-book"></i> Learn <i class="bi bi-caret-up-fill"></i>
+                <a
+                  class="nav-link text-white lead"
+                  data-bs-toggle="collapse"
+                  href="#learnMenu"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="learnMenu"
+                >
+                  <i class="bi bi-book"></i> Learn
+                  <i class="bi bi-caret-up-fill"></i>
                 </a>
                 <div class="collapse" id="learnMenu">
                   <ul class="nav flex-column ms-3">
-                    <li><a class="nav-link text-white" href="learn.html">How Plants Grow</a></li>
-                    <li><a class="nav-link text-white" href="crops.html">Meet the Crops</a></li>
-                    <li><a class="nav-link text-white" href="animals.html">Farm Animals</a></li>
-                    <li><a class="nav-link text-white" href="equipments.html">Farm Equipments</a></li>
-                    <li><a class="nav-link text-white" href="soil.html">From Soil to Spoon</a></li>
+                    <li>
+                      <a class="nav-link text-white" href="learn.html"
+                        >How Plants Grow</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link text-white" href="crops.html"
+                        >Meet the Crops</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link text-white" href="animals.html"
+                        >Farm Animals</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link text-white" href="equipments.html"
+                        >Farm Equipments</a
+                      >
+                    </li>
+                    <li>
+                      <a class="nav-link text-white" href="soil.html"
+                        >From Soil to Spoon</a
+                      >
+                    </li>
                   </ul>
                 </div>
               </li>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white lead" href="#"><i class="bi bi-question-circle"></i> Quizzes</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white lead" href="#"><i class="bi bi-trophy"></i> Achievements</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link text-white lead" href="../"><i class="bi bi-box-arrow-right"></i> Logout</a>
-            </li>
-              <div class="collapse navbar-collapse" id="navbarNavDropdown" style="justify-content: end; font-size: 1.2rem; font-weight: 450;">
-      <ul class="nav flex-column">
-        <li class="nav-item">
-          <a class="nav-link active text"  aria-current="page" href="index.html">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="about.html" aria-current="page">About</a>
-        </li>
-          <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="learn.html" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Learn
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="learn.html">How Plants Grow</a></li>
-            <li><a class="dropdown-item" href="crops.html">Meet the crops</a></li>
-            <li><a class="dropdown-item" href="animals.html">Farm Animals</a></li>
-            <li><a class="dropdown-item" href="equipments.html">Farm Equipments</a></li>
-            <li><a class="dropdown-item" href="soil.html">From soil to spoon</a></li>
-          </ul>
-        </li>
-                <li class="nav-item">
-          <a class="nav-link" href="games.html">Games</a>
-        </li>
-      </ul>
-            </div>  
-          </ul>
+              <li class="nav-item">
+                <a class="nav-link text-white lead" href="#"
+                  ><i class="bi bi-question-circle"></i> Quizzes</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white lead" href="#"
+                  ><i class="bi bi-trophy"></i> Achievements</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white lead" href="../"
+                  ><i class="bi bi-box-arrow-right"></i> Logout</a
+                >
+              </li>
+              <div
+                class="collapse navbar-collapse"
+                id="navbarNavDropdown"
+                style="
+                  justify-content: end;
+                  font-size: 1.2rem;
+                  font-weight: 450;
+                "
+              >
+                <ul class="nav flex-column">
+                  <li class="nav-item">
+                    <a
+                      class="nav-link active text"
+                      aria-current="page"
+                      href="index.html"
+                      >Home</a
+                    >
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="about.html" aria-current="page"
+                      >About</a
+                    >
+                  </li>
+                  <li class="nav-item dropdown">
+                    <a
+                      class="nav-link dropdown-toggle"
+                      href="learn.html"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Learn
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li>
+                        <a class="dropdown-item" href="learn.html"
+                          >How Plants Grow</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="crops.html"
+                          >Meet the crops</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="animals.html"
+                          >Farm Animals</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="equipments.html"
+                          >Farm Equipments</a
+                        >
+                      </li>
+                      <li>
+                        <a class="dropdown-item" href="soil.html"
+                          >From soil to spoon</a
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="games.html">Games</a>
+                  </li>
+                </ul>
+              </div>
+            </ul>
+          </div>
         </div>
+
+        <nav
+          class="col-md-3 col-lg-2 d-none d-md-block bg-success sidebar vh-100 position-sticky"
+        >
+          <div class="position-sticky pt-3">
+            <ul class="nav flex-column">
+              <li class="nav-item">
+                <a class="nav-link active text-white" href="#">
+                  <i class="bi bi-house"></i> Dashboard
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <i class="bi bi-tree"></i> My Farm
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <i class="bi bi-question-circle"></i> Quizzes
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="#">
+                  <i class="bi bi-trophy"></i> Achievements
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link text-white" href="../index.html">
+                  <i class="bi bi-box-arrow-right"></i> Logout
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
       </div>
-     
-      <nav class="col-md-3 col-lg-2 d-none d-md-block bg-success sidebar vh-100 position-fixed">
-        <div class="position-sticky pt-3">
-          <span>          <img class="offcanvas-title" id="sidebarOffcanvasLabel" src="../src/IMG/logo.png" style="min-width: 100px; height: 70px; max-width: 200px;"></img></span>
-          <ul class="nav flex-column">
-                      <li class="nav-item">
-             <a class="nav-link active text-white" href="#">
-               <i class="bi bi-house"></i> Dashboard
-             </a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link text-white" href="#">
-               <i class="bi bi-tree"></i> My Farm
-             </a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link text-white" href="#">
-               <i class="bi bi-question-circle"></i> Quizzes
-             </a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link text-white" href="#">
-               <i class="bi bi-trophy"></i> Achievements
-             </a>
-           </li>
-           <li class="nav-item">
-             <a class="nav-link text-white" href="../index.html">
-               <i class="bi bi-box-arrow-right"></i> Logout
-             </a>
-           </li>
-          </ul>
-        </div>
-      </nav>
-   </div>
-   <article></article>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      var dropdown = document.querySelector('.bi.bi-caret-up-fill');
-      dropdown.addEventListener('click', function () {
-        dropdown.className = "bi bi-caret-down-fill";
-      });
-    });
-  </script>
-</body>
+      <article></article>
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+      <script>
+        document.addEventListener("DOMContentLoaded", function () {
+          var dropdown = document.querySelector(".bi.bi-caret-up-fill");
+          dropdown.addEventListener("click", function () {
+            dropdown.className = "bi bi-caret-down-fill";
+          });
+        });
+      </script>
+    </div>
+  </body>
 </html>
