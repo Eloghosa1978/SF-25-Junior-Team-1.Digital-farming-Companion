@@ -1,10 +1,13 @@
-@media  screen and (max-width: 300px) {
-.offcanvas{
-    width: 35px !important;
+@media  screen and (max-width: 12500px) {
+    .offcanvas{
+    width: 35vw !important;
+    max-width: 300px !important;
+    min-width: 220px;
 
-}
+    }
     
 }
+
 
 .sidebar-div {
     position: absolute;
@@ -34,6 +37,19 @@
 .but-div {
     position: absolute;
     bottom: 10px;
-    left: 0;
-    width: 100%;
+    left: 15%;
+    width: 70%;
+    background-color: #a8c7b87c;
+}
+.log{
+    background-color: #f8f8f8d0;
+    padding: 20px;
+    font-size: 20px;
+}
+
+.sidebar-div > div > button{
+    background-color: #a8c7b87c;
+}
+.sidebar-div > div > button > i{
+    font-size: 40px;
 }
