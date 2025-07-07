@@ -7,31 +7,27 @@
 }
 
 .sidebar-div {
-  position: absolute;
   top: 10%;
   left: 0;
-  width: 80px;
   height: 90vh;
   background-color: #198754 !important;
   text-align: center;
-  max-width: 70px;
-  z-index: -1;
-  overflow: hidden;
+  max-width: 200px;
+  z-index: 1;
+  /* overflow: hidden;
   text-overflow: ellipsis;
-  white-space: nowrap;
+  white-space: nowrap; */
   padding-top: 20px;
+  position: sticky;
 }
-.sidebar-div > button {
-  position: relative;
+.sidebar-div > a {
   color: #ffffff;
   font-size: 35px;
-  left: -1px;
-  top: 0;
   text-align: center;
-  background-color: #c3ccc869;
+  text-decoration: none;
 }
 
-.sidebar-div > button:hover {
+.sidebar-div > a:hover {
   background-color: #c3ccc8e8;
   color: #ffffff;
 }
@@ -48,17 +44,24 @@
   font-size: 20px;
 }
 
-.sidebar-div > div > button {
+.sidebar-div > div > ul > div {
   background-color: #a8c7b87c;
-}
-.sidebar-div > div > button > i {
-  font-size: 40px;
+  width: 100%;
 }
 
-.icon-but-div {
-  width: auto;
-  height: 100%;
+.sidebar-div > div > ul > div > li > a > img {
+  width: 40px;
+  height: 40px;
+}
+.sidebar-div > div > ul > div > li > a {
   display: flex;
-  flex-direction: column;
-  gap: 10px;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar-div > div > ul > div {
+  margin: 5px;
+  width: 100%;
 }
