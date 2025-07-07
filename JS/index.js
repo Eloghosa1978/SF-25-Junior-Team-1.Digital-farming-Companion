@@ -1,5 +1,5 @@
 function loadComponent(id, file) {
-  fetch(file)
+  return fetch(file)
     .then((res) => res.text())
     .then((data) => {
       document.getElementById(id).innerHTML = data;
@@ -21,9 +21,13 @@ function loadComponent(id, file) {
     });
 }
 window.addEventListener("load", () => {
-  loadComponent("loading", "loading.html");
-  loadComponent("header", "header.html");
-  loadComponent("footer", "footer.html");
-
-  document.getElementById("loading-illustration").style.visibility = "hidden";
+  Promise.all([
+    loadComponent("header", "header.html"),
+    loadComponent("footer", "footer.html"),
+  ]).then(() => {
+    setTimeout(() => {
+      const loader = document.getElementById("loading");
+      if (loader) loader.style.display = "none";
+    }, 200);
+  });
 });

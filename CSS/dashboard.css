@@ -1,59 +1,64 @@
-@media  screen and (max-width: 12500px) {
-    .offcanvas{
+@media screen and (max-width: 12500px) {
+  .offcanvas {
     width: 35vw !important;
     max-width: 300px !important;
     min-width: 220px;
-
-    }
-    
+  }
 }
-
 
 .sidebar-div {
-    position: absolute;
-    top: 10%;
-    left: 0;
-    width: 80px;
-    height: 90vh;
-    background-color: #198754 !important;
-    text-align: center;
-    max-width: 100px;
-    z-index: -1;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    padding-top: 20px;
+  position: absolute;
+  top: 10%;
+  left: 0;
+  width: 80px;
+  height: 90vh;
+  background-color: #198754 !important;
+  text-align: center;
+  max-width: 70px;
+  z-index: -1;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding-top: 20px;
 }
-.sidebar-div> button {
-    position: relative;
-    color: #ffffff;
-    font-size: 35px;
-    left: -1px;
-    top: 0;
-    text-align: center;
-    background-color: #c3ccc869;
+.sidebar-div > button {
+  position: relative;
+  color: #ffffff;
+  font-size: 35px;
+  left: -1px;
+  top: 0;
+  text-align: center;
+  background-color: #c3ccc869;
 }
 
-.sidebar-div> button:hover {
-    background-color: #c3ccc869;
-    color: #ffffff;
+.sidebar-div > button:hover {
+  background-color: #c3ccc8e8;
+  color: #ffffff;
 }
 .but-div {
-    position: absolute;
-    bottom: 10px;
-    left: 15%;
-    width: 70%;
-    background-color: #a8c7b87c;
+  position: absolute;
+  bottom: 10px;
+  left: 15%;
+  width: 70%;
+  background-color: #a8c7b87c;
 }
-.log{
-    background-color: #f8f8f8d0;
-    padding: 20px;
-    font-size: 20px;
+.log {
+  background-color: #f8f8f8d0;
+  padding: 20px;
+  font-size: 20px;
 }
 
-.sidebar-div > div > button{
-    background-color: #a8c7b87c;
+.sidebar-div > div > button {
+  background-color: #a8c7b87c;
 }
-.sidebar-div > div > button > i{
-    font-size: 40px;
+.sidebar-div > div > button > i {
+  font-size: 40px;
+}
+
+.icon-but-div {
+  width: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 }
