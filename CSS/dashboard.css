@@ -11,41 +11,22 @@
   left: 0;
   height: 90vh;
   background-color: #198754 !important;
-  text-align: center;
-  max-width: 200px;
-  z-index: 1;
+  justify-content: center !important;
+  max-width: 250px;
+  z-index: 20000;
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; */
   padding-top: 20px;
   position: sticky;
 }
-.sidebar-div > a {
-  color: #ffffff;
-  font-size: 35px;
-  text-align: center;
-  text-decoration: none;
-}
-
-.sidebar-div > a:hover {
-  background-color: #c3ccc8e8;
-  color: #ffffff;
-}
-.but-div {
-  position: absolute;
-  bottom: 10px;
-  left: 15%;
-  width: 70%;
-  background-color: #a8c7b87c;
-}
-.log {
-  background-color: #f8f8f8d0;
-  padding: 20px;
-  font-size: 20px;
-}
 
 .sidebar-div > div > ul > div {
-  background-color: #a8c7b87c;
+  background-color: #a8c7b85d;
+  width: 100%;
+}
+.sidebar-div > div > ul > div:hover {
+  background-color: #a8c7b8bd;
   width: 100%;
 }
 
@@ -64,4 +45,16 @@
 .sidebar-div > div > ul > div {
   margin: 5px;
   width: 100%;
+}
+
+.icon-but-div {
+  justify-content: center;
+  margin-left: -0px;
+}
+
+.sidebar-container {
+  position: sticky;
+  justify-self: left;
+  background-color: red;
+  inset: 0 0 0 0;
 }
