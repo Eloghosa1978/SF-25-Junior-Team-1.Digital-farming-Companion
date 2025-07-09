@@ -63,8 +63,7 @@
 .sidebar-container {
   position: sticky;
   justify-self: left;
-  background-color: red;
-  inset: 0 0 0 0;
+  max-width: 450px;
 }
 */ .li {
   background-color: #a8c7b8bd;

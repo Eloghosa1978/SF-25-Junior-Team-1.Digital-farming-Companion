@@ -58,3 +58,31 @@
   background-color: red;
   inset: 0 0 0 0;
 }
+.c-t {
+  background-color: aqua;
+}
+.c-b {
+  background-color: #7bf862e8;
+}
+.explore {
+  background: linear-gradient(to top, rgb(211, 169, 55), rgb(57, 170, 91));
+  background-image: url("../src/IMG/explore-dashboard-section.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.explore-text {
+  background: rgba(7, 7, 7, 0.388);
+  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
+  padding: 20px;
+  margin: 30px;
+  font-weight: bold;
+  text-align: center;
+}
+.explore-text > p {
+  font-weight: 400;
+}
+
+.nav-shadow {
+  box-shadow: 20px, 20px, 20px, 20px;
+}
