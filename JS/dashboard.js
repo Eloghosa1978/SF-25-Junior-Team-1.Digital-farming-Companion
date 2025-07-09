@@ -9,7 +9,36 @@ function loadComponent(id, file) {
       document.getElementById(id).innerHTML = `<p>Error loading ${file}</p>`;
     });
 }
-
+document.getElementById("nav").innerHTML = `
+  <nav class="navbar navbar-expand-md navbar-dark bg-success position-sticky">
+    <div class="container-fluid d-flex align-items-center">
+      <div class="d-flex">
+        <button
+          class="navbar-toggler btn d-sm-block d-none"
+          onclick="toggleNav()"
+        >
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <button
+          class="btn btn-success navbar-toggler me-2 d-block d-sm-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarOffcanvas"
+          aria-controls="sidebarOffcanvas"
+        >
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <a class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
+          <img
+            src="../src/IMG/logo.png"
+            alt=""
+            style="width: 100px; height: 50px; max-width: 200px"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+`;
 // function loadComponent(id, file) {
 //   return fetch(file)
 //     .then((res) => res.text())
@@ -42,4 +71,13 @@ window.addEventListener("load", () => {
       if (loader) loader.style.display = "none";
     }, 200);
   });
+});
+
+let nav = document.getElementById("nav");
+nav.addEventListener("scroll", () => {
+  if (nav.scrollTop > 0) {
+    nav.className.add("nav-shadow");
+  } else {
+    nav.className.remove("nav-shadow");
+  }
 });
