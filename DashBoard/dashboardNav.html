@@ -1,0 +1,162 @@
+<!--Top Nav Section!-->
+<header>
+  <nav class="navbar navbar-expand-md navbar-dark bg-success position-sticky">
+    <div class="container-fluid d-flex align-items-center">
+      <div class="d-flex">
+        <button
+          class="navbar-toggler btn d-sm-block d-none"
+          onclick="toggleNav()"
+        >
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <button
+          class="btn btn-success navbar-toggler me-2 d-block d-sm-none"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#sidebarOffcanvas"
+          aria-controls="sidebarOffcanvas"
+        >
+          <i class="navbar-toggler-icon"></i>
+        </button>
+        <a class="navbar-brand d-flex align-items-center p-0 m-0" href="#">
+          <img
+            src="../src/IMG/logo.png"
+            alt=""
+            style="width: 100px; height: 50px; max-width: 200px"
+          />
+        </a>
+      </div>
+    </div>
+  </nav>
+</header>
+<!--End of Top Nav Section!-->
+<!--Sidebar Section!-->
+<div class="sidebar-container">
+  <nav class="bg-success sidebar-div d-none d-sm-block">
+    <ul class="side-nav-ul">
+      <li class="link rounded rounded-pill">
+        <img
+          src="../src/IMG/house.png"
+          alt=""
+          style="width: 47px; height: 40px"
+        />
+        <a href="dashboard.html" class="nav-lin" id="a-link">Dashboard</a>
+      </li>
+      <li class="link rounded rounded-pill">
+        <img
+          src="../src/IMG/knowledge.png"
+          alt=""
+          style="width: 47px; height: 40px"
+        />
+        <a href="#" class="nav-lin" id="a-link">Learn</a>
+      </li>
+      <li class="link rounded rounded-pill">
+        <img
+          src="../src/IMG/ideas.png"
+          alt=""
+          style="width: 47px; height: 40px"
+        />
+        <a href="#" class="nav-lin" id="a-link">Take Quiz</a>
+      </li>
+      <li class="link rounded rounded-pill">
+        <img
+          src="../src/IMG/medal.png"
+          alt=""
+          style="width: 47px; height: 40px"
+        />
+        <a href="#" class="nav-lin" id="a-link">Achievements</a>
+      </li>
+    </ul>
+    <button
+      class="align-items-center rounded justify-content-center link rounded rounded-pill log-out"
+      id="but-div"
+    >
+      <i class="bi bi-box-arrow-right h2 fw-bold text-light"></i>
+      <p class="nav-lin">Logout</p>
+    </button>
+  </nav>
+  <!-- Offcanvas Sidebar Section!-->
+
+  <div class="row">
+    <div
+      class="offcanvas offcanvas-start bg-success text-white"
+      tabindex="-1"
+      id="sidebarOffcanvas"
+      aria-labelledby="sidebarOffcanvasLabel"
+    >
+      <div class="offcanvas-header">
+        <img
+          class="offcanvas-title"
+          id="sidebarOffcanvasLabel"
+          src="../src/IMG/logo.png"
+          style="
+            min-width: 100px;
+            height: 50px;
+            max-width: 200px;
+            min-height: 50px;
+          "
+        />
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <!-- Offcanvas body content -->
+      <div class="">
+        <ul class="side-nav-ul">
+          <li class="link rounded rounded-pill">
+            <img
+              src="../src/IMG/house.png"
+              alt=""
+              style="width: 47px; height: 40px"
+            />
+            <a href="dashboard.html" class="nav-lin" id="a-link">Dashboard</a>
+          </li>
+          <div>
+            <li class="link rounded rounded-pill">
+              <img
+                src="../src/IMG/knowledge.png"
+                alt=""
+                style="width: 47px; height: 40px"
+              />
+              <a href="#" class="nav-lin" id="a-link">Learn</a>
+            </li>
+            <ul>
+              <li class="link">
+                <a href="#" class="nav-lin">Subtopic 1</a>
+              </li>
+              <li><a href="#" class="nav-lin">Subtopic 2</a></li>
+              <li><a href="#" class="nav-lin">Subtopic 3</a></li>
+            </ul>
+          </div>
+          <li class="link rounded rounded-pill">
+            <img
+              src="../src/IMG/ideas.png"
+              alt=""
+              style="width: 47px; height: 40px"
+            />
+            <a href="#" class="nav-lin" id="a-link">Take Quiz</a>
+          </li>
+          <li class="link rounded rounded-pill">
+            <img
+              src="../src/IMG/medal.png"
+              alt=""
+              style="width: 47px; height: 40px"
+            />
+            <a href="#" class="nav-lin" id="a-link">Achievements</a>
+          </li>
+        </ul>
+        <button
+          class="align-items-center rounded justify-content-center link rounded rounded-pill log-out"
+          id="but-div"
+        >
+          <i class="bi bi-box-arrow-right h2 fw-bold text-light"></i>
+          <p class="nav-lin">Logout</p>
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
+<!--End of Sidebar Section!-->

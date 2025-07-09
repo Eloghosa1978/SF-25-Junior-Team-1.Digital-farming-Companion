@@ -1,0 +1,133 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  inset: 0 0 0 0;
+}
+
+@media screen and (max-width: 12500px) {
+  .offcanvas {
+    width: 35vw !important;
+    max-width: 300px !important;
+    min-width: 220px;
+  }
+}
+
+.sidebar-div {
+  top: 10%;
+  left: 0;
+  height: 90vh;
+  background-color: #198754 !important;
+  justify-items: center;
+  max-width: 280px;
+  width: 250px;
+  z-index: 1;
+  /* overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap; */
+  padding: 20px 0 0 15px;
+  position: sticky;
+}
+
+.sidebar-div > div > ul > div {
+  background-color: #a8c7b85d;
+  width: 100%;
+}
+.sidebar-div > div > ul > div:hover {
+  background-color: #a8c7b8bd;
+  width: 100%;
+}
+
+.sidebar-div > div > ul > div > li > a > img {
+  width: 40px;
+  height: 40px;
+}
+.sidebar-div > div > ul > div > li > a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: #ffffff;
+}
+
+.sidebar-div > div > ul > div {
+  margin: 5px;
+  width: 100%;
+}
+
+.icon-but-div {
+  justify-content: center;
+  margin-left: -0px;
+}
+
+.sidebar-container {
+  position: sticky;
+  justify-self: left;
+  background-color: red;
+  inset: 0 0 0 0;
+}
+*/ .li {
+  background-color: #a8c7b8bd;
+  width: 100%;
+}
+.img-fluid {
+  max-width: 50px;
+  max-height: 50px;
+}
+.li > a {
+  display: flex;
+}
+
+ul {
+  margin: 0px;
+  overflow-x: hidden;
+  width: 120%;
+  position: relative;
+  left: -4px;
+  margin-left: -20px;
+  padding: 20px;
+}
+
+.link {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 0, 0, 0);
+  padding: 2px 5px;
+  width: 100%;
+  margin: 5px 0;
+  border: none;
+  background-color: #9ce9c550 !important;
+  color: white;
+  border: none;
+  position: relative;
+  bottom: 20px;
+  left: 0;
+  transition: all 3s;
+}
+.link:hover {
+  background-color: #76ac7a7c;
+}
+.active {
+  background-color: #a8c7b85d;
+}
+
+.nav-lin {
+  font-size: 20px;
+  text-decoration: none;
+  color: white;
+  margin-left: 10px;
+}
+
+.log-out {
+  background-color: #9ce9c550 !important;
+  color: white;
+  border: none;
+  width: 100%;
+  position: relative;
+  bottom: 20px;
+  left: 0;
+}
+.positon-sticky {
+  position: sticky;
+}
