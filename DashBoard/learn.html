@@ -22,6 +22,12 @@
       font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     }
 
+    .container-lg {
+        background-image: url('../src/IMG/header image.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
      .container {
       display: inline-flex;
       gap: 40px;
@@ -34,8 +40,8 @@
       transition: transform 1s ease-in-out;
       z-index: 1111;
     }
-    a:hover {
-      width: 50%;
+    a.li:hover {
+      width: 100%;
     }
     .mymin{
       background-color: #ACE1AF;
@@ -70,15 +76,11 @@
 
   
   <section class="p-10">
-    <div class="col-12">
-
-
-
+    <div class="container-lg">
       
-
-      <img class="img-fluid hero-image" src="../src/IMG/header image.png"></img>
-      <div class="container-fluid d-flex justify-content-center align-items-center flex-column mymin">
-      
+    </div>
+      <div class="container-fluid d-flex justify-content-center align-items-center flex-column my-5">
+    
 
       <h3 class="text-center fw-bold">Welcome to Agrikids</h3>
       <p class="text-center fw-bold list">Your one-step destination for learning about agriculture, 
@@ -92,26 +94,26 @@
         
       
       
-    <div class="row row-col-6 container-fluid d-inline-flex overall my-5">
+    <div class="row row-col-md-6 container-fluid d-inline-flex overall my-5">
       <h3 class="text-center fw-bold p-10"> EXPLORE TOPICS 😄 </h3>
       <div class="container justify-content-center my-3">
       <div class="col-12 col-md-6 col-lg-5 img-box">
         <img src="../src/IMG/Farming-basics.png" alt="Farming-basics" class="img-fluid image col-auto">
-        <a href="register.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
+        <a href="../DashBoard/basic-farming.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
       </div>
       <div class="col-12 col-md-6 col-lg-5 img-box">
         <img src="../src/IMG/Crop-farming.png" alt="Crop-farming" class="img-fluid image col-auto">
-        <a href="register.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
+        <a href="../DashBoard/crop-farming.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
       </div>
       </div>
       <div class="container justify-content-center my-3">
       <div class="col-12 col-md-6 col-lg-5 img-box">
         <img src="../src/IMG/Animal-farming.png" alt="Animal-farming" class="img-fluid image col-auto">
-        <a href="register.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
+        <a href="../DashBoard/animal-farming.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
       </div>
       <div class="col-12 col-md-6 col-lg-5 img-box">
         <img src="../src/IMG/green-smart farming.png" alt="green-smart farming" class="img-fluid image col-auto">
-        <a href="register.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
+        <a href="../DashBoard/green-smart.html" class="btn btn-success my-4 w-100 li">Start Learning</a>
       </div>
       </div>
       <div>
@@ -120,7 +122,13 @@
     </div>
   </section> 
 </div>
-      <h1>This is just a test</h1>
+
+  
+
+
+
+
+<footer id="footer"></footer>
 
 
 
