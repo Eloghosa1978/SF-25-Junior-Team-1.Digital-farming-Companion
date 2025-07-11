@@ -1,0 +1,46 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.chat-box {
+  height: 60vh; /* Adjust as needed */
+  overflow-y: auto;
+  border: 1px solid #dee2e6;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  background-color: #fff;
+}
+
+.card {
+  overflow-x: hidden;
+}
+.user-message {
+  justify-content: flex-end;
+}
+
+.user-message .p-2 {
+  background-color: #d1e7dd !important; /* Light green for user messages */
+}
+
+.bot-message {
+  justify-content: flex-start;
+}
+
+.bot-message .p-2 {
+  background-color: #f8f9fa !important; /* Light gray for bot messages */
+}
+
+::-webkit-scrollbar {
+  background-color: rgba(140, 233, 160, 0.87);
+  width: 15px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: greenyellow;
+  border-radius: 15%;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(168, 240, 59, 0.932);
+}
+::-webkit-scrollbar-corner {
+  border-radius: 30%;
+}
