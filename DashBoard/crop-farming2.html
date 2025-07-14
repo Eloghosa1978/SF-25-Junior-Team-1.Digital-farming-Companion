@@ -565,10 +565,10 @@
             <div class="col-12 col-md-10" id="question1">
               <form
                 action="#"
-                class="card p-2"
+                class="p-2 form-card"
                 onsubmit="nextQuestion(1, event)"
               >
-                <div class="card-header">
+                <div class="">
                   <p class="fw-bold lead">1. What is a crop?</p>
                 </div>
                 <label
@@ -601,20 +601,16 @@
                     class="form-check-input"
                   />A type of fertilizer</label
                 >
-                <button class="p-2 quiz-btn btn">Next Question</button>
+                <button class="quiz-btn">Next Question</button>
                 <br />
-                <div class="card-footer">
+                <div class="">
                   <p class="text-center">Question 1 of 6</p>
                 </div>
               </form>
             </div>
             <div class="col-12 col-md-10" id="question2" style="display: none">
-              <form
-                action="#"
-                class="card p-2"
-                onsubmit="nextQuestion(2, event)"
-              >
-                <div class="card-header">
+              <form action="#" class="p-2" onsubmit="nextQuestion(2, event)">
+                <div class="">
                   <p class="fw-bold lead">
                     2. Which of the following is a food crop?
                   </p>
@@ -628,19 +624,15 @@
                 ><label
                   ><input type="radio" name="ques2" value="d" />Rubber</label
                 >
-                <button class="btn p-2 quiz-btn">Next Question</button>
+                <button class="quiz-btn">Next Question</button>
                 <br />
-                <div class="card-footer">
+                <div class="">
                   <p class="text-center">Question 2 of 6</p>
                 </div>
               </form>
             </div>
             <div class="col-12 col-md-10" id="question3" style="display: none">
-              <form
-                action="#"
-                class="card p-2"
-                onsubmit="nextQuestion(3, event)"
-              >
+              <form action="#" class="p-2" onsubmit="nextQuestion(3, event)">
                 <div class="card-header">
                   <p class="fw-bold lead">
                     🪴 5. What part of the crop helps it drink water from the
@@ -656,7 +648,7 @@
                 ><label
                   ><input type="radio" name="ques3" value="d" />Roots</label
                 >
-                <button class="btn p-2 quiz-btn">Next Question</button>
+                <button class="quiz-btn">Next Question</button>
                 <div class="card-footer">
                   <p class="text-center">Question 3 of 6</p>
                 </div>
@@ -682,7 +674,7 @@
                 ><label
                   ><input type="radio" name="ques4" value="d" />Cocoa</label
                 >
-                <button class="btn p-2 quiz-btn">Next Question</button>
+                <button class="quiz-btn">Next Question</button>
                 <div class="card-footer">
                   <p class="text-center">Question 4 of 6</p>
                 </div>
@@ -700,30 +692,33 @@
                     season (with watering)?
                   </p>
                 </div>
-                <label
-                  ><input type="radio" name="ques5" value="a" />A. Yams and rice </label
-                ><label
+                <label for="ques5">
+                  <input type="radio" name="ques5" value="a" />A. Yams and rice
+                </label>
+                <label for="ques5"
                   ><input type="radio" name="ques5" value="b" />B. Tomatoes and
                   onions</label
-                ><label
+                >
+                <label for="ques5"
                   ><input type="radio" name="ques5" value="c" />C. Cocoa and
                   cotton</label
-                ><label
-                  ><input type="radio" name="ques5" value="d" />D. Maize and
-                  millet</label
                 >
-                <button class="btn p-2 quiz-btn">Next Question</button>
+                <label for="ques5"
+                  ><input type="radio" name="ques5" value="d" />D. Maize and
+                  millet
+                </label>
+                la
+                <div class="container-fluid">
+                  <button type="submit" class="quiz-btn">Next Question</button>
+                </div>
+                <br />
                 <div class="card-footer">
                   <p class="text-center">Question 5 of 6</p>
                 </div>
               </form>
             </div>
             <div class="col-12 col-md-10" id="question6" style="display: none">
-              <form
-                action="#"
-                class="card p-2"
-                onsubmit="nextQuestion(6, event)"
-              >
+              <form action="#" class="p-2" onsubmit="nextQuestion(6, event)">
                 <div class="card-header">
                   <p class="fw-bold lead">
                     6. 🔧 Which of these is a tool a farmer might use?
@@ -739,9 +734,7 @@
                 ><label
                   ><input type="radio" name="ques6" value="d" />Spoon</label
                 >
-                <button class="btn p-2 quiz-btn" type="button">
-                  Next Question
-                </button>
+                <button class="quiz-btn">Next Question</button>
                 <div class="card-footer">
                   <p class="text-center">Question 6 of 6</p>
                 </div>
