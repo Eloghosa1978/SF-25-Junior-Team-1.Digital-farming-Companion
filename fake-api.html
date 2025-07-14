@@ -1,0 +1,49 @@
+<div class="container-sm mt-5 shadow-lg">
+  <div class="card">
+    <div
+      class="card-header bg-primary text-white justify-content-around row align-content-center"
+      style="align-items: center; display: flex"
+    >
+      <div class="float-start col-10">
+        <h5 class="mb-0">AgriKids learn assistant</h5>
+      </div>
+
+      <div class="float-end col-2">
+        <button
+          onclick="closeChat()"
+          class="btn btn-outline-warning rounded rounded-circle"
+          style="width: 40px; height: 40px; text-align: center"
+        >
+          <i
+            class="bi bi-x"
+            style="
+              font-size: 40px;
+              font-weight: 700;
+              position: relative;
+              top: -15px;
+              left: -15px;
+            "
+          ></i>
+        </button>
+      </div>
+    </div>
+    <div class="card-body chat-box" id="chat-box">
+      <div class="d-flex justify-content-start mb-2">
+        <div class="p-2 bg-light rounded shadow-sm">
+          Hello! I am Agi your learning assistant, How can I help you today?
+        </div>
+      </div>
+    </div>
+    <div class="card-footer d-flex">
+      <input
+        type="text"
+        id="user-input"
+        class="form-control me-2"
+        placeholder="Type your message..."
+      />
+      <button class="btn btn-primary" id="send-button">
+        <span class="material-symbols-rounded">send</span>
+      </button>
+    </div>
+  </div>
+</div>

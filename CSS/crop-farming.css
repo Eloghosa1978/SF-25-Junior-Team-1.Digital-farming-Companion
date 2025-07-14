@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --leaf-green: #4caf50;
+  --warm-yellow: #ffd54f;
+  --sky-blue: #81d4fa;
+  --tomato-red: #ef5350;
+  --soil-brown: #6d4c41;
+  --soft-purple: #ba68c8;
+  --light-orange: #ffb74d;
+  --cream-white: #fff8e1;
+}
+
+.title {
+  color: var(--leaf-green);
+}
+
+.hero {
+  background-color: var(--sky-blue);
+}
+
+.intro {
+  background-color: #e0c56b;
+  color: var(--tomato-red);
+}
