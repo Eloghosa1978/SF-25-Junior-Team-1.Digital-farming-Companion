@@ -62,10 +62,7 @@ document.getElementById("nav").innerHTML = `
 //     });
 // }
 window.addEventListener("load", () => {
-  Promise.all([
-    loadComponent("header", "dashboardNav.html"),
-    loadComponent("footer", "footer.html"),
-  ]).then(() => {
+  Promise.all([loadComponent("header", "dashboardNav.html")]).then(() => {
     setTimeout(() => {
       const loader = document.getElementById("loading");
       if (loader) loader.style.display = "none";
@@ -81,3 +78,14 @@ nav.addEventListener("scroll", () => {
     nav.className.remove("nav-shadow");
   }
 });
+
+function openChat() {
+  const chat = document.getElementById("chat-container");
+
+  chat.classList.add("open-chat-box");
+}
+function closeChat() {
+  const chat = document.getElementById("chat-container");
+
+  chat.classList.remove("open-chat-box");
+}
