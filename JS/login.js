@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (oldMes) {
       oldMes.remove();
     }
+
     event.preventDefault();
     console.log(email, password);
 

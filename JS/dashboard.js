@@ -10,7 +10,7 @@ function loadComponent(id, file) {
     });
 }
 document.getElementById("nav").innerHTML = `
-  <nav class="navbar navbar-expand-md navbar-dark bg-success position-sticky">
+  <nav class="navbar navbar-expand-md navbar-dark bg-success ">
     <div class="container-fluid d-flex align-items-center">
       <div class="d-flex">
         <button
