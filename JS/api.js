@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 // Your API key - REMEMBER THE SECURITY WARNING!
 // For a production application, this should be handled securely on a backend server.
-const API_KEY = "AIzaSyC9wkagYi_GhiN538LVvINn95gSYGyZCd0";
+const API_KEY = "AIzaSyBnaX0KzgTwpoXlqutd9fHmGNzgVmM5DBQ";
 
 // Initialize the Generative AI client with your API key
 const genAI = new GoogleGenerativeAI(API_KEY);
@@ -14,12 +14,7 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 // Changed from "gemini-pro" to "gemini-1.5-flash" to resolve the 404 API error.
 // "gemini-1.5-flash" is recommended for general, fast chat applications.
 // You could also use "gemini-1.5-pro" for more complex reasoning.
-const model = genAI.getGenerativeModel({
-  model: "gemini-1.5-flash",
-  config: {
-    systemInstruction: "You an AI. Your name is Agi",
-  },
-});
+const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
 // Get references to DOM elements
 const chatBox = document.getElementById("chat-box");
@@ -87,7 +82,6 @@ sendButton.addEventListener("click", () => {
   if (message) {
     // Only send if the message is not empty
     sendMessageToGemini(message);
-    console.log(message);
   }
 });
 

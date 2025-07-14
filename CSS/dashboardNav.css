@@ -14,20 +14,20 @@
 }
 
 .sidebar-div {
-  top: 10%;
+  position: relative;
+  top: 20%;
   left: 0;
-  height: 90vh;
   background-color: #198754 !important;
   justify-items: center;
   max-width: 280px;
   width: 250px;
-  z-index: 1;
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; */
-  padding: 20px 0 0 15px;
-  position: sticky;
+  padding: 100px 0 0 30px;
+  height: 115vh;
   border-top-right-radius: -20px;
+  margin-top: 10vh;
 }
 
 .sidebar-div > div > ul > div {
@@ -62,9 +62,9 @@
 }
 
 .sidebar-container {
-  position: sticky;
   justify-self: left;
-  max-width: 450px;
+  max-width: 400px;
+  position: sticky;
 }
 */ .li {
   background-color: #a8c7b8bd;
@@ -130,4 +130,11 @@ ul {
 }
 .positon-sticky {
   position: sticky;
+}
+
+nav {
+  height: 70px;
+  position: fixed;
+  margin-bottom: 10px;
+  z-index: 100;
 }
