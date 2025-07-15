@@ -16,6 +16,16 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 // You could also use "gemini-1.5-pro" for more complex reasoning.
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
+// System Instuctions
+const systemInstruction = {
+  role: "system",
+  parts: [
+    {
+      text: "You are FolaBot, a cheerful and helpful chatbot that teaches children about farming. Use simple language, short sentences, and fun emojis.",
+    },
+  ],
+};
+
 // Get references to DOM elements
 const chatBox = document.getElementById("chat-box");
 const userInput = document.getElementById("user-input");
@@ -28,11 +38,14 @@ const sendButton = document.getElementById("send-button");
  */
 function addMessage(message, sender) {
   const messageElement = document.createElement("div");
-  messageElement.classList.add("d-flex", "mb-2"); // Bootstrap flexbox for alignment
 
+  messageElement.classList.add("d-flex", "mb-2"); // Bootstrap flexbox for alignment
+  const formatted = message
+    .replace(/\n/g, "<br>")
+    .replace(/\*(.*?)\*/g, "<strong>$1</strong>");
   const messageContent = document.createElement("div");
   messageContent.classList.add("p-2", "rounded", "shadow-sm"); // Bootstrap styling for message bubble
-  messageContent.textContent = message; // Set the message text
+  messageContent.innerHTML = formatted; // Set the message text
 
   if (sender === "user") {
     messageElement.classList.add("user-message", "justify-content-end"); // Align to right
@@ -53,16 +66,36 @@ function addMessage(message, sender) {
  * Sends the user's message to the Gemini API and displays the bot's response.
  * @param {string} message - The user's input message.
  */
+// async function sendMessageToGemini(message) {
+//   // Add the user's message to the chat display
+//   addMessage(message, "user");
+//   userInput.value = ""; // Clear the input field immediately
+
+//   try {
+//     // Send the message to the Gemini model
+//     const result = await model.generateContent(message, {
+//       contents: [
+//         systemInstruction,
+//         { role: "user", parts:[{text}]}
+//       ]
+//     });
+//     const response = await result.response; // Get the raw response object
+//     const text = response.text(); // Extract the text content from the response
+
+//     // Add the bot's response to the chat display
+//     addMessage(text, "bot");
+//   }
 async function sendMessageToGemini(message) {
-  // Add the user's message to the chat display
   addMessage(message, "user");
-  userInput.value = ""; // Clear the input field immediately
+  userInput.value = "";
+  const systemPrompt =
+    "You are Agi, a cheerful chatbot who helps children aged 8–12 learn about farming. Use simple words, short answers, and fun emojis like 🌾 and 🐄. Use *asterisks* around important words and \n for new lines. Introduce yourself only on their first message. If a question is asked answer them giving catching and fun examples.";
+  const fullPrompt = systemPrompt + message;
 
   try {
-    // Send the message to the Gemini model
-    const result = await model.generateContent(message);
+    const result = await model.generateContent(fullPrompt);
     const response = await result.response; // Get the raw response object
-    const text = response.text(); // Extract the text content from the response
+    const text = response.text(); // Extract the text content from the
 
     // Add the bot's response to the chat display
     addMessage(text, "bot");
