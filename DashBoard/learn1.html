@@ -72,15 +72,20 @@
       border-radius: 0px;
       padding: 10px, 10px, 20px, 20px;
     } */
+<<<<<<< HEAD
+  </style>
+</head>
+<body>
+  <header id="header"></header>
+=======
     </style>
   </head>
   <body>
-    <nav id="nav"></nav>
+    <header id="nav"></header>
 
     <div class="d-flex flex-row">
       <section id="header"></section>
-      <main class="mt-5">
-              <section class="p-10">
+      <section class="p-10">
         <div class="container-lg"></div>
         <div
           class="container-fluid d-flex justify-content-center align-items-center flex-column my-5"
@@ -101,6 +106,7 @@
             <br />
             own food!
           </p>
+>>>>>>> 93a3fb63c8befacfe0a6f783f44a56001d4ad8e1
 
           <div
             class="row row-col-md-6 container-fluid d-inline-flex overall my-5"
@@ -223,8 +229,6 @@
         </div>
       </div>
     </section>
-      </main>
-
 
     <script src="../JS/dashboard.js"></script>
     <script src="../JS/navbar.js"></script>
@@ -232,6 +236,51 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 
+<<<<<<< HEAD
+
+
+<footer id="footer"></footer>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../JS/index.js"></script>
+  <script>
+  document.getElementById('header').innerHTML = `
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">Agrikids</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../DashBoard/learn.html">Learn</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="../DashBoard/contact.html">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>`;
+  window.onload = function () {
+    setTimeout(function () {
+      document.getElementById('introText').classList.add('fade-out')
+      setTimeout(function () {
+        document.getElementById('introText').style.display = 'none';
+        document.getElementById('mainContent').style.display = 'block';
+      }, 1000); 
+    }, 3000); 
+  };
+  </script>
+</body>
+</html>
+=======
     <script>
       window.onload = function () {
         setTimeout(function () {
@@ -245,3 +294,4 @@
     </script>
   </body>
 </html>
+>>>>>>> 93a3fb63c8befacfe0a6f783f44a56001d4ad8e1

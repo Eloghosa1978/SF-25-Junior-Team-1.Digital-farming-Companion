@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../../CSS/dashboard.css" />
+    <link rel="stylesheet" href="../../CSS/dashboardNav.css" />
+    <link rel="stylesheet" href="../../style/api.css" />
+    <link rel="stylesheet" href="../../CSS/quiz-index.css" />
+    <link rel="icon" href="../src/IMG/logo.png" type="image/png" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+  </head>
+  <body>
+    <nav id="nav" class=""></nav>
+    <div class="d-flex flex-row">
+      <section id="header"></section>
+      <main
+        class="justify-content-center w-100 mt-5 px-2"
+        style="justify-self: center"
+      >
+        <!---Her Section-->
+        <section id="hero " class="mt-4">
+          <div
+            class="container-fluid text-center quiz-hero rounded-3 py-4 px-2"
+          >
+            <h2 class="display-2 fw-bold my-3">Choose a Quiz Topic</h2>
+            <h2 class="h3 text-">
+              “Test what you've learned! Click on a card below to take a fun
+              quiz about farming topics.”
+            </h2>
+          </div>
+        </section>
+        <!---Quiz Card Section-->
+        <section id="card-quiz">
+          <div class="container-fluid quiz-container p-2">
+            <h2 class="text-center display-4 fw-bold">Quiz Topic Card</h2>
+            <div
+              class="card-container container-fluid p-2 row justify-content-center gap-3"
+            >
+              <div
+                class="border p-2 rounded col-12 col-md-4 col-lg-3"
+                style="min-width: 20rem; max-width: 24rem"
+              >
+                <div class="card-body">
+                  <h2 class="card-title h3 fw-bold text-center">
+                    Crop Farming
+                    <br />🌾
+                  </h2>
+                  <p class="card-text lead">
+                    Take a test about food crops, cash crops, and tools.
+                    <br />Then get a certificate of approval after finishing the
+                    test.
+                  </p>
+                  <a
+                    href="./QUIZ/crop-farming-quiz.html"
+                    class="btn btn-primary fw-bold form-control"
+                    style="justify-self: center"
+                    >Take Quiz Now</a
+                  >
+                </div>
+              </div>
+              <div
+                class="border p-2 rounded col-12 col-md-4 col-lg-3"
+                style="min-width: 20rem; max-width: 24rem"
+              >
+                <div class="card-body">
+                  <h2 class="card-title h3 text-center">
+                    Animal Farming
+                    <br />🐄
+                  </h2>
+                  <p class="card-text lead">
+                    Take a test on how farmers care for cows, goats, and more.
+                    <br />Then get a certificate of approval after finishing the
+                    test.
+                  </p>
+                  <a
+                    href="./QUIZ/animal-farming-quiz.html"
+                    class="btn btn-primary fw-bold form-control"
+                    style="justify-self: center"
+                    >Take Quiz Now</a
+                  >
+                </div>
+              </div>
+              <div
+                class="border p-2 rounded col-12 col-md-4 col-lg-3"
+                style="min-width: 20rem; max-width: 24rem"
+              >
+                <div class="card-body">
+                  <h2 class="card-title h3 fw-bold text-center">
+                    Green & Smart Farming
+                    <br />
+                    💡🌱
+                  </h2>
+                  <p class="card-text lead">
+                    Take a test about discovering tech and eco-friendly ways to
+                    farm.
+                    <br />Then get a certificate of approval after finishing the
+                    test.
+                  </p>
+                  <a
+                    href="./QUIZ/green&smart-quiz.html"
+                    class="btn btn-primary fw-bold form-control"
+                    >Take Quiz Now</a
+                  >
+                </div>
+              </div>
+              <div
+                class="border p-2 rounded col-12 col-md-4 col-lg-3"
+                style="min-width: 20rem; max-width: 24rem"
+              >
+                <div class="card-body">
+                  <h2 class="card-title display-6 fw-bold text-center">
+                    Seasons & Crops
+                    <br />
+                    🌧️☀️
+                  </h2>
+                  <p class="card-text lead">
+                    What grows when? Test your rainy and sunny crop skills!
+                    <br />Then get a certificate of approval after finishing the
+                    test.
+                  </p>
+                  <a
+                    href="./QUIZ/season-quiz.html"
+                    class="btn btn-primary fw-bold form-control"
+                    style="justify-self: center"
+                    >Take Quiz Now</a
+                  >
+                </div>
+              </div>
+              <div
+                class="border p-2 rounded col-12 col-md-4 col-lg-3"
+                style="min-width: 20rem; max-width: 24rem"
+              >
+                <img src="..." class="card-img-top" alt="..." />
+                <div class="card-body">
+                  <h2 class="card-title display-6 fw-bold text-center">
+                    Mixed Review
+                    <br />
+                    🧠🌀
+                  </h2>
+                  <p class="card-text lead">
+                    Take a mix test of all topics for fun and revision.
+                    <br />Then get a certificate of approval after finishing the
+                    test.
+                  </p>
+                  <a
+                    href="mixed-review-quiz.html"
+                    class="btn btn-primary fw-bold form-control"
+                    style="justify-self: center"
+                    >Take Quiz Now</a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../JS/api.js"></script>
+    <script src="../../JS/navbar.js"></script>
+    <script src="../../JS/quiz.js"></script>
+    <script src="../JS/dashboard.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

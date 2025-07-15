@@ -109,6 +109,7 @@
   top: 80vh;
   right: 50px;
   margin: 0 -20px;
+  object-fit: cover;
   animation: chat-btn 2s ease-in-out infinite;
 }
 .chat-btn > button {
@@ -117,6 +118,10 @@
   font-weight: 500;
   font-size: 20px;
   opacity: 0.8;
+}
+.chat-btn > button > img {
+  height: 120px;
+  width: 90px;
 }
 
 .chat-btn > button:hover {
