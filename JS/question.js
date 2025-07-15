@@ -175,3 +175,104 @@ const animalFarming = {
     },
   ],
 };
+
+const greenSmartFarming = {
+  questions: [
+    {
+      id: 1,
+      text: "What is green farming mainly about?",
+      options: [
+        "Using only green plants",
+        "Farming with care for the environment",
+        "Wearing green clothes to farm",
+      ],
+      answer: 1,
+    },
+    {
+      id: 2,
+      text: "What does smart farming use to help farmers?",
+      options: [
+        "Magic",
+        "Mobile apps, machines, and technology",
+        "Only old tools",
+      ],
+      answer: 1,
+    },
+    {
+      id: 3,
+      text: "Why is using too much chemical harmful?",
+      options: [
+        "It makes crops grow too fast",
+        "It can harm the soil and water",
+        "It makes animals smarter",
+      ],
+      answer: 1,
+    },
+    {
+      id: 4,
+      text: "Which of these is a clean energy source in farming?",
+      options: ["Solar power", "Burning plastic", "Car fuel"],
+      answer: 0,
+    },
+    {
+      id: 5,
+      text: "How do drip systems help in green farming?",
+      options: [
+        "They clean animals",
+        "They waste water",
+        "They give water slowly to crops and save water",
+      ],
+      answer: 2,
+    },
+    {
+      id: 6,
+      text: "What does a weather sensor do in smart farming?",
+      options: [
+        "Tells jokes",
+        "Helps predict the weather for better planting",
+        "Cleans the soil",
+      ],
+      answer: 1,
+    },
+    {
+      id: 7,
+      text: "Why is organic farming part of green farming?",
+      options: [
+        "It uses natural ways to grow food",
+        "It’s more colorful",
+        "It grows plastic plants",
+      ],
+      answer: 0,
+    },
+    {
+      id: 8,
+      text: "How does technology make farming smarter?",
+      options: [
+        "By using robots, sensors, and data",
+        "By using more people",
+        "By guessing what to do next",
+      ],
+      answer: 0,
+    },
+    {
+      id: 9,
+      text: "What is one benefit of smart farming?",
+      options: [
+        "More guessing",
+        "More waste",
+        "Better planning and less waste",
+      ],
+      answer: 2,
+    },
+    {
+      id: 10,
+      text: "Why should we protect the soil, air, and water when farming?",
+      options: [
+        "To keep the farm dirty",
+        "To help nature and stay healthy",
+        "So plants can watch movies",
+      ],
+      answer: 1,
+    },
+  ],
+};
