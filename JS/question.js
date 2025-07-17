@@ -276,3 +276,35 @@ const greenSmartFarming = {
     },
   ],
 };
+
+// Exercise Part
+//Exercise for seasonal farming
+const seasonalFarming = {
+  questions: [
+    {
+      id: 1,
+      text: "All Crops Grow best in the rainy season",
+      answer: "1",
+      options: ["True", "False"],
+    },
+    {
+      id: 2,
+      text: "Farmers plant crops in the dry season",
+      answer: "0",
+      options: ["True", "False"],
+    },
+    {
+      id: 3,
+      text: "The wet season is when it rains a lot",
+      answer: "0",
+      options: ["True", "False"],
+    },
+    {
+      id: 4,
+      text: "Farmers can plant any crop any time of the year",
+      answer: "1",
+      options: ["True", "False"],
+    },
+  ],
+};
+// Exporting the test data

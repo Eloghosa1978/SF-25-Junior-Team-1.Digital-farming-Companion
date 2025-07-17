@@ -7,7 +7,8 @@ window.onload = () => {
   // Animal Farming
   animalFarming.questions.forEach((q) => {
     const div = document.createElement("div");
-    div.className = "mb-3";
+    div.className = "mb-2 lead bg-light shadow-lg p-4 rounded";
+    div.style = "border: 1px solid #81d4fa; font-size: 1.3rem;";
     let optionsHTML = "";
 
     q.options.forEach((opt, idx) => {
@@ -22,6 +23,7 @@ window.onload = () => {
     div.innerHTML = `
         <p class="fw-bold">${q.text}</p>
         ${optionsHTML}
+        <br/>
       `;
 
     animalFarmingContainer.appendChild(div);

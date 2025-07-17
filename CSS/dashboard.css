@@ -106,7 +106,7 @@
 }
 .chat-btn {
   position: fixed;
-  top: 80vh;
+  top: 20vh;
   right: 50px;
   margin: 0 -20px;
   object-fit: cover;
@@ -131,13 +131,13 @@
 }
 @keyframes chat-btn {
   0% {
-    top: 80vh;
+    top: 65vh;
   }
   50% {
-    top: 75vh;
+    top: 60vh;
   }
   100% {
-    top: 80vh;
+    top: 65vh;
   }
 }
 @media screen and (max-width: 650px) {
