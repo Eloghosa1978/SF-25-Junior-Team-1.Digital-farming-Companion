@@ -30,9 +30,66 @@
         font-size: 1.2rem;
         font-weight: bold;
       }
+      .header {
+        background-color: #81d4fa;
+      }
+      .hero {
+        background-color: #81d4fa;
+      }
+      .quiz-btn {
+        background-color: #81d4fa;
+        color: white;
+        border: 2px solid #4ab4e5;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        cursor: pointer;
+        border-radius: 20px;
+        transition: all 0.3s ease-in-out;
+        font-weight: 600;
+        width: 100%;
+        max-width: 550px;
+      }
+      .quiz-btn:hover {
+        background-color: #37b6f1d5;
+        color: rgb(210, 238, 250);
+        border-color: #4bacdad5;
+      }
     </style>
   </head>
-  <body class="bg-light p-5">
+  <body class="bg-light">
+    <!---Header-->
+    <header class="p-2 w-100 header">
+      <button
+        class="btn btn-warning p-2"
+        onclick="window.location.href = '../quiz-index.html'"
+      >
+        Back to quiz home
+      </button>
+    </header>
+    <!--Hero Section-->
+    <section id="hero" class="hero p-2 mb-3">
+      <div class="container-fluid">
+        <div class="title">
+          <h2 class="display-3 fw-bold text-center text-white">
+            Crop Farming Quiz
+          </h2>
+        </div>
+        <div class="hero-img text-center">
+          <img
+            src="../../src/IMG/crop-farming-quiz-hero.png"
+            alt=""
+            style="width: 350px; min-width: 150px; height: 250px"
+          />
+        </div>
+        <div class="description text-center text-white container-sm">
+          <p class="lead">
+            Test your knowledge about crop farming with this interactive quiz.
+            Answer the questions to see how much you know about agriculture and
+            crop cultivation.
+          </p>
+        </div>
+      </div>
+    </section>
     <div class="container">
       <h1 class="mb-4">Multiple Choice Test</h1>
 
@@ -40,13 +97,16 @@
       <div id="animal-farming-questions"></div>
 
       <!-- Submit Button -->
-      <button
-        id="submitBtn"
-        class="btn btn-primary mt-3"
-        onclick="animalCheckAnswers()"
-      >
-        Submit
-      </button>
+      <!-- Submit Button -->
+      <div class="container-lg justify-content-around text-center">
+        <button
+          id="submitBtn"
+          class="quiz-btn mt-3"
+          onclick="animalCheckAnswers()"
+        >
+          Submit
+        </button>
+      </div>
 
       <!-- Result -->
       <div id="result" class="mt-4"></div>
@@ -86,7 +146,7 @@
             </div>
           </div>
           <div class="modal-footer">
-            <button class="btn btn-success" onclick="downloadBadge()">
+            <button class="btn btn-primary" onclick="downloadBadge()">
               Download Badge
             </button>
             <button class="btn btn-secondary" onclick="printBadge()">
