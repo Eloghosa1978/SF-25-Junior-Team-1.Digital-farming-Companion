@@ -22,10 +22,17 @@
       background: lightgreen;
     }
 
-    header{
-      background: green;
-      color: white;
+    head{
+      background: seagreen;
       padding: 10px;
+      color: white;
+      border-bottom-left-radius: 20px;
+      border-bottom-right-radius: 20px;
+      height: 150px;
+    }
+    
+    .section h2 {
+      font-size: 70px;
     }
 
     main {
@@ -111,6 +118,7 @@
         transform: translateY(10px);
       }
     }
+    
 
     a {
       animation: bounce 3s linear infinite;
@@ -124,23 +132,27 @@
       transform: translateX(20px);
     }
 
+    
   </style>
 </head>
 <body class="lead fw-bold">
+  <header id="header">
+
+  </header>
+  
   <div class="mb-5 text-center">
-  <header>
+  <head>
   <h1 class="text-center">Animal Farming Wonderland</h1>
   <h5>Where Learning Meets Laughter In The World Of Agriculture!</h5>
   <p>Discover, Laugh, Learn about your favourite animals</p>
   </div>
-  </header>
+  </head>
 
-  <main>
+  <main class="">
     <div class="section">
-      <img src="https://images.unsplash.com/photo-1611128476649-f06dc5a95c5b?auto=format&fit=crop&w=800&q=80" alt="Cows on a farm">
       <div class="section-content">
-        <h2 class="text-success">What Is Animal Farming?</h2>
-        <p>Animalfarming is the rearing of animals for human use. It is also called livestock farming. People raise animals for different purposes such as food, clothing, medicine, labour, and income.</p>
+        <h2 class="text-success text-center my-5">What Is Animal Farming?</h2>
+        <p>Animal farming is the rearing of animals for human use. It is also called livestock farming. People raise animals for different purposes such as food, clothing, medicine, labour, and income.</p>
         <ul>
           <li><strong>Food:</strong>Animals like chickens, goat, pigs, and cows provide meat, eggs, and milk.</li>
           <li><strong>Clothing:</strong>Sheep and rabbit provide wool and fur for clothing materials.</li>
@@ -150,8 +162,94 @@
       </div>
     </div>
 
-    <div class="sect">
-      <div class="sect-content">
+    
+
+    <div class="importance bg-light border-success rounded w-50 my-5">
+      <div class="importance-content p-3">
+        <h2 class="text-success">Why Animal Farming Matters</h2>
+        <ul>
+          <li><strong>Nutrition:</strong>Animal farming supplies nutritious food like eggs, milks, and meat.</li>
+          <li><strong>Economic Growth:</strong>It helps many farmers earn a living and boost the economy.</li>
+          <li><strong>Employment:</strong>It provides jobs for farmers, vets, sellers, and drivers.</li>
+          <li><strong>Soil Fertility:</strong>Animal droppings are used as manure to make crops grow better.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="farm-animals rounded w-50 my-5 shadow-lg">
+      <div class="farm-animals-content p-3">
+        <h2 class="text-success">Types of Farm Animals</h2>
+        <ul>
+          <li><strong>Poultry:</strong>These include chickens, ducks, and turkeys raised mainly for eggs and meat.</li>
+          <li><strong>Livestock:</strong>Cows, goats, pigs, and sheeps are kept for milk, meat, and wool.</li>
+          <li><strong>Working Animals:</strong>Donkeys and oxen are used for transport and plowing.</li>
+          <li><strong>Small Animals:</strong>Rabbits and bees also play important roles in farming.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="animal-care bg-light border rounded w-50 my-5">
+      <div class="animal-care-content p-3">
+        <h2 class="text-success">Animal Care and Welfare</h2>
+        <ul>
+          <li><strong>Feeding:</strong>Animals shouldbe fed nutritous and balanced food.</li>
+          <li><strong>Shelter:</strong>They need claen and save housing away from rain and sun.</li>
+          <li><strong>Health:</strong>Sick animals should be treated by a vet quickly.</li>
+          <li><strong>Clean water:</strong>Animals need fresh water everyday to stay healthy.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="modern rounded w-50 my-5 shadow-lg">
+      <div class="modern-farming p-3">
+        <h2 class="text-success">Modern Animal Farming</h2>
+        <ul>
+          <li><strong>Technology:</strong>Farmers use machines to feed animals and clean shelters.</li>
+          <li><strong>Monitoring:</strong>Cameras and sensors help check the health of animals.</li>
+          <li><strong>Efficiency:</strong>Tools like automatic waterers save time and water.</li>
+          <li><strong>Safety:</strong>Modern farms use fences and alarms to protect animals.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="housing bg-light border rounded w-50 my-5">
+      <div class="animal-housing p-3">
+        <h2 class="text-success">Animal Housing</h2>
+        <ul>
+          <li>Chiken Coop:<strong>A safe place for chickens with perches and nest boxes. </strong></li>
+          <li><strong>Pig Pen:</strong>Built with concrete floors and water drains for hygiene.</li>
+          <li><strong>Goat Shed:</strong>Raised floor to prevent dampness and disease.</li>
+          <li><strong>Cattle Barn:</strong>Spacious shelter with feeding troughs and open space for movement.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="impact rounded w-50 my-5 shadow-lg">
+      <div class="impact-animals p-3">
+        <h2 class="text-success">Environmental Impact of Animal Farming</h2>
+        <ul>
+          <li><strong>Positive:</strong>Animal waste improves soil fertility when used properly.</li>
+          <li><strong>Negative:</strong>Poor waste management causes pollution and disease.</li>
+          <li><strong>Solutions:</strong>Use biogas systems, rotate grazing land, and plant trees.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="future rounded w-50 my-5 bg-light border">
+      <div class="future-animal p-3">
+        <h2 class="text-success">The Future of Animal Farming</h2>
+        <ul>
+          <li><strong>Robots:</strong>Robots now help milk cows and feed animals.</li>
+          <li><strong>Smart Apps:</strong>Farmers use apps to track health and sales.</li>
+          <li><strong>Youth Involvement:</strong>Young people are bringing new ideas and tech to the farm.</li>
+        </ul>
+      </div>
+    </div>
+
+
+        <div class="d-flex">
+    <div class="sect bg-light border w-50 rounded my-5">
+      <div class="sect-content p-3">
         <h2 class="text-success">Fun Animal Facts</h2>
         <ul>
           <li>Goat have accents and recognize each other's voices.</li>
@@ -164,8 +262,8 @@
       </div>
     </div>
 
-    <div class="jokes">
-      <div class="jokes-content">
+    <div class="jokes rounded w-50 my-5 shadow-lg ms-3">
+      <div class="jokes-content p-3">
         <h2 class="text-success">Animal Jokes Zone</h2>
         <ul>
           <li>Why did the cow become an astronaut?
@@ -178,92 +276,10 @@
           <br> A pork chop!</li>
           <li>What do you call a cow that plays the guitar?
           <br> A moo-sician!</li>
-        </ul>
+        </ul>        
+
       </div>
     </div>
-
-    <div class="importance">
-      <div class="importance-content">
-        <h2 class="text-success">Why Animal Farming Matters</h2>
-        <ul>
-          <li><strong>Nutrition:</strong>Animal farming supplies nutritious food like eggs, milks, and meat.</li>
-          <li><strong>Economic Growth:</strong>It helps many farmers earn a living and boost the economy.</li>
-          <li><strong>Employment:</strong>It provides jobs for farmers, vets, sellers, and drivers.</li>
-          <li><strong>Soil Fertility:</strong>Animal droppings are used as manure to make crops grow better.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="farm-animals">
-      <div class="farm-animals-content">
-        <h2 class="text-success">Types of Farm Animals</h2>
-        <ul>
-          <li><strong>Poultry:</strong>These include chickens, ducks, and turkeys raised mainly for eggs and meat.</li>
-          <li><strong>Livestock:</strong>Cows, goats, pigs, and sheeps are kept for milk, meat, and wool.</li>
-          <li><strong>Working Animals:</strong>Donkeys and oxen are used for transport and plowing.</li>
-          <li><strong>Small Animals:</strong>Rabbits and bees also play important roles in farming.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="animal-care">
-      <div class="animal-care-content">
-        <h2 class="text-success">Animal Care and Welfare</h2>
-        <ul>
-          <li><strong>Feeding:</strong>Animals shouldbe fed nutritous and balanced food.</li>
-          <li><strong>Shelter:</strong>They need claen and save housing away from rain and sun.</li>
-          <li><strong>Health:</strong>Sick animals should be treated by a vet quickly.</li>
-          <li><strong>Clean water:</strong>Animals need fresh water everyday to stay healthy.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="modern">
-      <div class="modern-farming">
-        <h2 class="text-success">Modern Animal Farming</h2>
-        <ul>
-          <li><strong>Technology:</strong>Farmers use machines to feed animals and clean shelters.</li>
-          <li><strong>Monitoring:</strong>Cameras and sensors help check the health of animals.</li>
-          <li><strong>Efficiency:</strong>Tools like automatic waterers save time and water.</li>
-          <li><strong>Safety:</strong>Modern farms use fences and alarms to protect animals.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="housing">
-      <div class="animal-housing">
-        <h2 class="text-success">Animal Housing</h2>
-        <ul>
-          <li>Chiken Coop:<strong>A safe place for chickens with perches and nest boxes. </strong></li>
-          <li><strong>Pig Pen:</strong>Built with concrete floors and water drains for hygiene.</li>
-          <li><strong>Goat Shed:</strong>Raised floor to prevent dampness and disease.</li>
-          <li><strong>Cattle Barn:</strong>Spacious shelter with feeding troughs and open space for movement.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="impact">
-      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="Environmental impact">
-      <div class="impact-animals">
-        <h2 class="text-success">Environmental Impact of Animal Farming</h2>
-        <ul>
-          <li><strong>Positive:</strong>Animal waste improves soil fertility when used properly.</li>
-          <li><strong>Negative:</strong>Poor waste management causes pollution and disease.</li>
-          <li><strong>Solutions:</strong>Use biogas systems, rotate grazing land, and plant trees.</li>
-        </ul>
-      </div>
-    </div>
-
-    <div class="future">
-      <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754" alt="">
-      <div class="future-animal">
-        <h2 class="text-success">The Future of Animal Farming</h2>
-        <ul>
-          <li><strong>Robots:</strong>Robots now help milk cows and feed animals.</li>
-          <li><strong>Smart Apps:</strong>Farmers use apps to track health and sales.</li>
-          <li><strong>Youth Involvement:</strong>Young people are bringing new ideas and tech to the farm.</li>
-        </ul>
-      </div>
     </div>
 
     
