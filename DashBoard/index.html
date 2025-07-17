@@ -263,14 +263,25 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer d-flex">
-                <input
-                  type="text"
+              <div class="card-footer d-flex justify-content-around">
+                <textarea
                   id="user-input"
-                  class="form-control me-2"
-                  placeholder="Type your message..."
-                />
-                <button class="btn btn-primary" id="send-button">
+                  class="form-control rounded-pill px-4 py-2"
+                  placeholder="Type your message here..."
+                  style="
+                    resize: none;
+                    height: 100px;
+                    border: 1.5px solid #ffd54f;
+                    max-width: 70%;
+                    font-size: 20px;
+                    font-weight: 400;
+                  "
+                ></textarea>
+                <button
+                  class="btn btn-success rounded-pill d-flex justify-content-center align-items-center"
+                  style="width: 100px; height: 50px; align-self: center"
+                  id="send-button"
+                >
                   <span class="material-symbols-rounded">send</span>
                 </button>
               </div>
