@@ -1,0 +1,25 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --leaf-green: #4caf50;
+  --warm-yellow: #ffd54f;
+  --sky-blue: #81d4fa;
+  --tomato-red: #ef5350;
+  --soil-brown: #6d4c41;
+  --soft-purple: #ba68c8;
+  --light-orange: #ffb74d;
+  --cream-white: #fff8e1;
+}
+
+main {
+  box-sizing: border-box;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+}
+
+.quiz-hero {
+  background-color: var(--warm-yellow);
+}

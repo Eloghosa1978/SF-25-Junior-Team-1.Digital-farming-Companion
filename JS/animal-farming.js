@@ -1,14 +1,13 @@
 // Generate questions dynamically
 window.onload = () => {
-  const cropFarmingContainer = document.getElementById(
-    "crop-farming-questions"
+  const animalFarmingContainer = document.getElementById(
+    "animal-farming-questions"
   );
 
   // Animal Farming
-  cropFarming.questions.forEach((q) => {
+  animalFarming.questions.forEach((q) => {
     const div = document.createElement("div");
-    div.className = "mb-2 lead bg-light shadow-lg p-4 rounded";
-    div.style = "border: 1px solid #ccc; font-size: 1.3rem;";
+    div.className = "mb-3";
     let optionsHTML = "";
 
     q.options.forEach((opt, idx) => {
@@ -23,15 +22,14 @@ window.onload = () => {
     div.innerHTML = `
         <p class="fw-bold">${q.text}</p>
         ${optionsHTML}
-        <br/>
       `;
 
-    cropFarmingContainer.appendChild(div);
+    animalFarmingContainer.appendChild(div);
   });
 };
 
-// For crop Farming
-function cropCheckAnswers() {
+// For Animal Farming
+function animalCheckAnswers() {
   let score = 0;
 
   cropFarming.questions.forEach((q) => {

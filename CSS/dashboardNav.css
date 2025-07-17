@@ -2,7 +2,6 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  inset: 0 0 0 0;
 }
 
 @media screen and (max-width: 12500px) {
@@ -14,20 +13,18 @@
 }
 
 .sidebar-div {
-  position: relative;
-  top: 20%;
+  position: sticky;
   left: 0;
   background-color: #198754 !important;
   justify-items: center;
-  max-width: 280px;
-  width: 250px;
+  max-width: 250px;
+  min-width: 200px;
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; */
   padding: 100px 0 0 30px;
-  height: 115vh;
   border-top-right-radius: -20px;
-  margin-top: 10vh;
+  height: 100%;
 }
 
 .sidebar-div > div > ul > div {
@@ -65,8 +62,10 @@
   justify-self: left;
   max-width: 400px;
   position: sticky;
+  height: 100vh;
+  background-color: #198754;
 }
-*/ .li {
+.li {
   background-color: #a8c7b8bd;
   width: 100%;
 }
@@ -137,4 +136,13 @@ nav {
   position: fixed;
   margin-bottom: 10px;
   z-index: 100;
+  justify-self: right;
+  width: 100%;
+}
+
+@media screen and (max-width: 625px) {
+  nav {
+    width: 100%;
+    max-width: 100%;
+  }
 }

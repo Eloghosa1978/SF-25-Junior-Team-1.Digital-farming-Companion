@@ -4,14 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Dash Board | Agri kids Adventures</title>
-    <link rel="stylesheet" href="../CSS/dashboard.css" />
-    <link rel="stylesheet" href="../CSS/dashboardNav.css" />
-    <link rel="stylesheet" href="../style/api.css" />
-    <link rel="icon" href="../src/IMG/logo.png" type="image/png" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link rel="stylesheet" href="../CSS/dashboardNav.css" />
+    <link rel="stylesheet" href="../style/api.css" />
+    <link rel="icon" href="../src/IMG/logo.png" type="image/png" />
+
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
@@ -23,14 +24,11 @@
     <link rel="stylesheet" href="../CSS/api.css" />
   </head>
   <body>
-    <!--Navigation Bar!-->
     <nav id="nav" class=""></nav>
     <div class="d-flex flex-row">
-      <section class="" id="header"></section>
-      <!--Main Content Section!-->
-      <main
-        class="text-dark container-fluid float-md-end w-100 h-100 rounded rounded-3 mt-5"
-      >
+      <section id="header"></section>
+      <!--Main Content-->>
+      <main class="justify-content-center w-100 mt-5 px-2">
         <!---Hero Section-->
         <section class="mt-5 justify-content-center container-fluid" id="hero">
           <div class="container-fluid justify-content-center text-center">
@@ -69,9 +67,9 @@
                       </p>
                       <div class="text-center">
                         <a
-                          href="#"
+                          href="./learn.html"
                           class="btn btn-success form-control w-50 fw-bold lead"
-                          >Go to My Farm</a
+                          >Start Learning Now</a
                         >
                       </div>
                     </div>
@@ -83,19 +81,18 @@
                   <div class="justify-content-center">
                     <div class="border-bottom c-t h-100 w-100 p-2">
                       <h5 class="card-title text-center h2 text-success">
-                        Learn About Farming
+                        Test your strength
                       </h5>
                     </div>
                     <div class="c-b h-100 p-2 pb-3">
                       <p class="card-text c-b text-center h4">
-                        Learn about farm activities, crop growth and planting,
-                        and about animal rearing.
+                        Play Exciting quizzes and win reward
                       </p>
                       <div class="text-center">
                         <a
-                          href="#"
+                          href="./quiz.html"
                           class="btn btn-success form-control w-50 fw-bold lead"
-                          >Go to My Farm</a
+                          >Play Quiz Now</a
                         >
                       </div>
                     </div>
@@ -222,9 +219,10 @@
           <div class="container-fluid"></div>
         </section>
 
+        <!--Assistant Section-->
         <div class="chat-btn" style="z-index: 100">
-          <button class="btn btn-success p-3" onclick="openChat()">
-            Have A question?
+          <button class="btn" onclick="openChat()">
+            <img src="../src/IMG/chat-mascot.png" alt="" />
           </button>
         </div>
         <section class="chat-box-container" id="chat-container">
@@ -265,14 +263,25 @@
                   </div>
                 </div>
               </div>
-              <div class="card-footer d-flex">
-                <input
-                  type="text"
+              <div class="card-footer d-flex justify-content-around">
+                <textarea
                   id="user-input"
-                  class="form-control me-2"
-                  placeholder="Type your message..."
-                />
-                <button class="btn btn-primary" id="send-button">
+                  class="form-control rounded-pill px-4 py-2"
+                  placeholder="Type your message here..."
+                  style="
+                    resize: none;
+                    height: 100px;
+                    border: 1.5px solid #ffd54f;
+                    max-width: 70%;
+                    font-size: 20px;
+                    font-weight: 400;
+                  "
+                ></textarea>
+                <button
+                  class="btn btn-success rounded-pill d-flex justify-content-center align-items-center"
+                  style="width: 100px; height: 50px; align-self: center"
+                  id="send-button"
+                >
                   <span class="material-symbols-rounded">send</span>
                 </button>
               </div>
