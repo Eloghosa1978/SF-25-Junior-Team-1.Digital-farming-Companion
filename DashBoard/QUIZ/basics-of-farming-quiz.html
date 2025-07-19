@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upgraded Multiple Choice Test</title>
+    <link rel="icon" href="../src/IMG/logo.png" type="image/png" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous"/>
+</head>
+<body>
+    <section class="">
+      <div class="container-fluid p-2">
+        <h1 class="text-warning text-center display-3 text-center fw-bold">
+          Interactive Activity: Mini-Quiz
+        </h1>
+        <p class="text-secondary display-6 fw-bold text-center">
+          Test your knowledge with these fun questions!
+        </p>
+        <div class="container">
+          <form id="quizForm">
+            <!-- Question 1 -->
+            <div class="mb-3">
+              <label class="form-label"
+                >1. What is farming?</label
+              >
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  value="To produce food and other essential resources to sustain life and support economies"
+                  id="q1a"
+                />
+                <label class="form-check-label" for="q1a"
+                  >Farming is the practice of cultivating land to grow crops and raise animals for food, clothing, and other products that help sustain life. It’s one of the oldest professions in human history and remains a vital part of global society.
+                </label>
+              </div>
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="radio"
+                  name="q1"
+                  value="It's one of the oldest human activities"
+                  id="q1b"
+                />
+                <label class="form-check-label" for="q1b"
+                  >It's one of the oldest human activities</label>
+              </div>
+
+              <!-- Question 2 -->
+              <div class="mb-3">
+                <label class="form-label"
+                  >2. Name one type of farming.</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q2"
+                    value="Protein Crops"
+                    id="q2a"
+                  />
+                  <label class="form-check-label" for="q2a"
+                    >Hoe Farming</label
+                  >
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q2"
+                    value="Fiber Crops"
+                    id="q2b"
+                  />
+                  <label class="form-check-label" for="q2b">Crop Farming</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >3. What tool is used for plowing?</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q3"
+                    value="Hoe"
+                    id="q3a"
+                  />
+                  <label class="form-check-label" for="q3a">Hoe</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q3"
+                    value="Plow"
+                    id="q3b"
+                  />
+                  <label class="form-check-label" for="q3b">Plow</label>
+                </div>
+              </div>
+
+              <div class="mb-3">
+                <label class="form-label"
+                  >4. Which one is not a daily task on farming</label
+                >
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q4"
+                    value="Feeding"
+                    id="q4a"
+                  />
+                  <label class="form-check-label" for="q4a">Cutting Green</label>
+                </div>
+                <div class="form-check">
+                  <input
+                    class="form-check-input"
+                    type="radio"
+                    name="q4"
+                    value="Cutting"
+                    id="q4b"
+                  />
+                  <label class="form-check-label" for="q4b">Feeding Animals</label>
+                </div>
+              </div>
+              
+
+
+              <button
+                type="submit"
+                class="btn btn-success text-center form-control"
+              >
+                Submit Answers
+              </button>
+              </div>
+            </form>
+          </div>
+
+          <div id="result" class="mt-4"></div>
+        </div>
+      </div>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script src=""></script>
+    <script>
+      document
+        .getElementById("quizForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+
+          let score = 0;
+          const answers = {
+            q1: "To produce food and other essential resources to sustain life and support economies",
+            q2: "Fiber Crops",
+            q3: "Plow",
+            q4: "Feeding",
+          };
+
+          for (let key in answers) {
+            const selected = document.querySelector(
+              `input[name="${key}"]:checked`
+            );
+            if (selected && selected.value === answers[key]) {
+              score++;
+            }
+          }
+
+          const resultDiv = document.getElementById("result");
+          resultDiv.innerHTML = `<div class="alert alert-info">You scored ${score} out of ${
+            Object.keys(answers).length
+          }!</div>`;
+        });
+    </script>
+</body>
+</html>
