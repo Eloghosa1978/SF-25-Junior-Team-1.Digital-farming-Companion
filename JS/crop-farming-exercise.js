@@ -1,7 +1,7 @@
 window.onload = () => {
   // Exercises
-  const container = document.getElementById("questions");
-  seasonalFarming.questions.forEach((q) => {
+  const exerciseContainer = document.getElementById("exercise-questions");
+  cropFarmingExercises.questions.forEach((q) => {
     const div = document.createElement("div");
     div.className = "mb-4 p-3 border rounded bg-white";
     let optionsHTML = "";
@@ -23,12 +23,14 @@ window.onload = () => {
           ${optionsHTML}
           <br/>
         `;
-    container.appendChild(div);
+    exerciseContainer.appendChild(div);
   });
 };
 
 function checkAnswer(questionId, selectedValue) {
-  const question = seasonalFarming.questions.find((q) => q.id === questionId);
+  const question = cropFarmingExercises.questions.find(
+    (q) => q.id === questionId
+  );
 
   question.options.forEach((opt, idx) => {
     const label = document.getElementById(`${questionId}_label_${idx}`);
@@ -41,16 +43,18 @@ function checkAnswer(questionId, selectedValue) {
   question.options.forEach((opt, idx) => {
     const label = document.getElementById(`${questionId}_label_${idx}`);
     // Check if the option is the correct answer
-    if (String(opt) === String(question.answer)) {
+    if (opt === question.options[question.answer]) {
       label.innerHTML = `✅ ${opt}`;
       label.classList.add("correct");
-      if (
-        String(opt) === String(selectedValue) &&
-        String(selectedValue) !== String(question.answer)
-      ) {
-        label.innerHTML = `❌ ${opt}`;
-        label.classList.add("incorrect");
-      }
+    } else if (
+      String(opt) === String(selectedValue) &&
+      String(selectedValue) !== String(question.answer)
+    ) {
+      label.innerHTML = `❌ ${opt}`;
+      label.classList.add("incorrect");
+    } else {
+      label.innerHTML = opt;
+      label.classList.remove("correct", "incorrect");
     }
   });
 

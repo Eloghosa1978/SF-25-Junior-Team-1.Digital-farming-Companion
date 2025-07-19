@@ -1,3 +1,9 @@
+body {
+  background-color: #f8f9fa;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
+}
+
 .reasons > strong {
   font-weight: 500;
 }
