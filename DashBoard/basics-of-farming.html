@@ -81,19 +81,19 @@
           <h1 class="text-warning">Farming Tools</h1>
           <div class="row">
             <div class="row col m-2 justify-content-center">
-              <img src="../src/img/tractor.png" alt="Tractor" class="" />
+              <img src="../src/img/tractor.png" alt="Tractor" class="col" />
               <h3 class="text-warning">Tractor</h3>
               <p class="text-secondary">
                 Used for plowing and other heavy tasks.
               </p>
             </div>
             <div class="row col m-2 justify-content-center">
-              <img src="../src/img/plow.png" alt="Plow" class="" />
+              <img src="../src/img/plow.png" alt="Plow" class="col" />
               <h3 class="text-warning">Plow</h3>
               <p class="text-secondary">Breaks up the soil for planting.</p>
             </div>
             <div class="row col m-2 justify-content-center">
-              <img src="../src/img/hoe.png" alt="Hoe" class="" />
+              <img src="../src/img/hoe.png" alt="Hoe" class="col" />
               <h3 class="text-warning">Hoe</h3>
               <p class="text-secondary">Used for weeding and cultivating.</p>
             </div>
@@ -156,10 +156,10 @@
             >Ready for a quiz</a
           >
         </section>
-        <div class="chat-btn" style="z-index: 100">
-          <button class="btn btn-success p-3" onclick="openChat()">
-            Have A question?
-          </button>
+        <div class="chat-btn img-fluid w-100" style="z-index: 100">
+          <img src="../src/img/chat-mascot.png" class="btn btn-success img-fluid" onclick="openChat()">
+            
+        </img>
         </div>
         <section class="chat-box-container" id="chat-container">
           <div class="container-sm mt-5 shadow-lg">
@@ -222,34 +222,6 @@
       integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
       crossorigin="anonymous"
     ></script>
-    <script>
-      document
-        .getElementById("quizForm")
-        .addEventListener("submit", function (e) {
-          e.preventDefault();
-
-          let score = 0;
-          const answers = {
-            q1: "To produce food and other essential resources to sustain life and support economies",
-            q2: "Fiber Crops",
-            q3: "Plow",
-          };
-
-          for (let key in answers) {
-            const selected = document.querySelector(
-              `input[name="${key}"]:checked`
-            );
-            if (selected && selected.value === answers[key]) {
-              score++;
-            }
-          }
-
-          const resultDiv = document.getElementById("result");
-          resultDiv.innerHTML = `<div class="alert alert-info">You scored ${score} out of ${
-            Object.keys(answers).length
-          }!</div>`;
-        });
-    </script>
     <script src="../JS/dashboard.js"></script>
     <script src="../JS/navbar.js"></script>
     <script type="module" src="../JS/api.js"></script>
