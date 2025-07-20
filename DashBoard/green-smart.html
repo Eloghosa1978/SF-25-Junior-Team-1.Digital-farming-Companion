@@ -1,258 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Green Smart Farming</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
-  <link rel="icon" href="../src/IMG/logo.png" type="image/png">
-  <style>
-    * {
-      box-sizing: border-box;
-      font-family: 'Poppins', sans-serif;
-    }
-
-    body {
-      margin: 0;
-      background: #0e1f16;
-      color: #e2fcec;
-      overflow-x: hidden;
-    }
-
-    header {
-      background: url('https://images.unsplash.com/photo-1509395176047-4a66953fd231?auto=format&fit=crop&w=1400&q=80') no-repeat center center/cover;
-      height: 100vh;
-      text-align: center;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: #ffffff;
-      position: relative;
-    }
-
-    header::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 0, 0, 0.7);
-    }
-
-    header h1 {
-      font-size: 4em;
-      z-index: 1;
-      position: relative;
-      animation: glow 2s ease-in-out infinite alternate;
-    }
-
-    header p {
-      font-size: 1.4em;
-      z-index: 1;
-      position: relative;
-    }
-
-    @keyframes glow {
-      from {
-        text-shadow: 0 0 10px #38a169, 0 0 20px #48bb78;
-      }
-      to {
-        text-shadow: 0 0 20px #48bb78, 0 0 30px #9ae6b4;
-      }
-    }
-
-    section {
-      padding: 4em 2em;
-      max-width: 1200px;
-      margin: auto;
-    }
-
-    .title {
-      font-size: 2.5em;
-      text-align: center;
-      color: #9ae6b4;
-      margin-bottom: 1em;
-    }
-
-    .intro p {
-      font-size: 1.1em;
-      line-height: 1.7;
-      background: #1c2e24;
-      padding: 1.5em;
-      border-radius: 10px;
-    }
-
-    .tool-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 2em;
-      margin-top: 3em;
-    }
-
-    .tool {
-      background: #1e3027;
-      padding: 1em;
-      border-radius: 15px;
-      text-align: center;
-      transition: transform 0.4s ease;
-      box-shadow: 0 0 12px #2f855a44;
-    }
-
-    .tool:hover {
-      transform: scale(1.05);
-    }
-
-    .tool img {
-      width: 80px;
-      margin-bottom: 1em;
-    }
-
-    .tool h3 {
-      color: #81e6d9;
-    }
-
-    .fact-box {
-      background: #172922;
-      padding: 2em;
-      margin-top: 4em;
-      border-radius: 15px;
-      font-size: 1.3em;
-      color: #c6f6d5;
-      min-height: 100px;
-      text-align: center;
-    }
-
-    .chatbot {
-      background: #13221a;
-      margin-top: 4em;
-      padding: 2em;
-      border-radius: 15px;
-    }
-
-    .chatbot input {
-      width: 100%;
-      padding: 1em;
-      font-size: 1em;
-      border: none;
-      border-radius: 10px;
-      background: #1e3d2b;
-      color: #c6f6d5;
-    }
-
-    .chat-output {
-      margin-top: 1em;
-      background: #16352a;
-      padding: 1em;
-      border-radius: 10px;
-      min-height: 60px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2em;
-      background: #0c1711;
-      color: #81e6d9;
-    }
-
-    @media (max-width: 600px) {
-      header h1 { font-size: 2.5em; }
-      .title { font-size: 2em; }
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Green-smart Farming</title>
 </head>
 <body>
-  <header>
-    <h1>GREEN SMART FARMING</h1>
-    <p>Farming Powered by Intelligence. Built for the Future.</p>
-  </header>
+    <h1>🌿 Green Smart Farming: The Coolest Way to Farm the Future! 🚜💚</h1>
+    <p><strong>Hey little earth hero! 🌍💪🏽</strong></p>
+    <p>Have you ever heard of Green Smart Farming? It's not farming that’s painted green (😂), but a smart,
+        <br>
+        clean, and cool way of growing food while protecting our planet!</p>
 
-  <section class="intro">
-    <h2 class="title">🌱 What Is Green Smart Farming?</h2>
-    <p>
-      Green Smart Farming is the fusion of nature and technology. It’s how we grow more food with fewer resources, protect our environment, and create a smarter, sustainable future using drones, sensors, AI, and robotics.
-    </p>
-  </section>
+        <p>Let’s break it down into fun bits so you can become a Green Smart Farming Champion!</p>
 
-  <section>
-    <h2 class="title">🛠 Smart Tools We Use</h2>
-    <div class="tool-grid">
-      <div class="tool">
-        <img src="https://i.ibb.co/sJKrCZn/drone.png" alt="Drone">
-        <h3>Drones</h3>
-        <p>Fly over farms to detect pests, diseases, and monitor growth.</p>
-      </div>
-      <div class="tool">
-        <img src="https://i.ibb.co/x3Wdbbp/soil-sensor.png" alt="Sensor">
-        <h3>Soil Sensors</h3>
-        <p>Check soil health, moisture, and nutrient levels in real-time.</p>
-      </div>
-      <div class="tool">
-        <img src="https://i.ibb.co/cc7FVSM/robot-farmer.png" alt="Robot">
-        <h3>Farm Robots</h3>
-        <p>Help with planting, spraying, and harvesting crops.</p>
-      </div>
-      <div class="tool">
-        <img src="https://i.ibb.co/VtZB7kF/rice.jpg" alt="Forecast">
-        <h3>AI Predictions</h3>
-        <p>Forecast best planting time using weather and data analysis.</p>
-      </div>
-    </div>
-  </section>
+        <h2>🌱 What is Green Smart Farming?</h2>
+        <p>Green Smart Farming is a special kind of farming that uses smart ideas, eco-friendly tools, and new technologies to grow food in a better way. It’s called "green" because it’s good for the environment 🌳, and "smart" because it uses brainy methods like:</p>
+        <ul>
+            <li><strong>Technology:</strong> Using computers, sensors, and drones to help farmers know when to water plants or check if they are healthy. 🤖</li>
+            <li><strong>Organic Methods:</strong> Growing food without harmful chemicals, using natural fertilizers like compost instead. 🌾</li>
+            <li><strong>Water Conservation:</strong> Using special systems to save water while still keeping plants happy and healthy. 💧</li>
+            <li><strong>Crop Rotation:</strong> Changing what crops are planted in different seasons to keep the soil healthy. 🌽🍅</li>
+            <li><strong>Drones:</strong> Using drones to watch over growing crops.</li>
+            <li><strong>Recycling: </strong>Recycling methods to promote an eco-friendly environment</li>
 
-  <section>
-    <h2 class="title">💡 Smart Fact of the Day</h2>
-    <div class="fact-box" id="factBox">Click the button below to reveal a mind-blowing fact!</div>
-    <div style="text-align:center; margin-top:1em;">
-      <button onclick="getFact()" style="padding: 0.7em 1.2em; background: #38a169; border: none; color: white; font-size: 1em; border-radius: 10px; cursor: pointer;">🔄 Reveal Fact</button>
-    </div>
-  </section>
+            <p>Yes, farming is getting smarter—and cooler!</p>
 
-  <section class="chatbot">
-    <h2 class="title">🤖 Ask AGI Anything</h2>
-    <input type="text" id="chatInput" placeholder="Ask a smart farming question..." onkeydown="if(event.key==='Enter'){answerBot()}">
-    <div class="chat-output" id="chatOutput">💬 Waiting for your question...</div>
-  </section>
+            <h2>🤔 Why Do We Need Green Smart Farming?</h2>
+            <p><strong>Great question!</strong></p>
+            <p>Our world is changing—some places are getting hotter, drier, or more crowded. That makes farming harder. But don’t worry, Green Smart Farming is here to help by:</p>
 
-  <footer>
-    © 2025 Green Smart Farming | AgriKids
-  </footer>
+            <li>✅ Growing more food with less water and land </li>
+            <li>✅ Protecting the soil, rivers, and forests</li>
+            <li>✅ Using clean energy like sunshine and wind</li>
+            <li>✅ Producing less waste and fewer harmful gases</li>
+            <li>✅ Helping farmers save time, money, and energy</li>
 
-  <script>
-    const facts = [
-      "Smart farms can grow 3x more food using 60% less water.",
-      "Drones can scan 100 acres in under 5 minutes.",
-      "AI robots can plant over 30,000 seeds per day.",
-      "Soil sensors can prevent drought damage before it happens.",
-      "Smart irrigation systems reduce water waste by up to 80%."
-    ];
+            <p>It’s like turning farming into a superhero mission for the Earth! 🦸🏾‍♀️🌽</p>
 
-    function getFact() {
-      const box = document.getElementById("factBox");
-      box.innerHTML = "";
-      let fact = facts[Math.floor(Math.random() * facts.length)];
-      let i = 0;
-      function typeWriter() {
-        if (i < fact.length) {
-          box.innerHTML += fact.charAt(i);
-          i++;
-          setTimeout(typeWriter, 50);
-        }
-      }
-      typeWriter();
-    }
+            <h4>🛠️ How Does It Work?</h4>
+            <p>Here’s how farmers farm smarter and greener:</p>
 
-    function answerBot() {
-      const input = document.getElementById("chatInput").value.toLowerCase();
-      const output = document.getElementById("chatOutput");
-      let response = "🤔 Hmm... I'm still learning that one!";
-
-      if (input.includes("drones")) response = "🚁 Drones help monitor crop health and spray fields accurately.";
-      else if (input.includes("robot")) response = "🤖 Robots can plant, spray, and even harvest — non-stop!";
-      else if (input.includes("sensor")) response = "🧪 Sensors collect data like moisture and nutrients from soil.";
-      else if (input.includes("green smart farming")) response = "🌿 It's using tech like AI and drones to farm sustainably.";
-      else if (input.includes("ai")) response = "🧠 AI helps farmers decide when to plant, irrigate, and harvest.";
-
-      output.textContent = response;
-      document.getElementById("chatInput").value = "";
-    }
-  </script>
+            <ol>
+                <li>Solar-Powered Pumps: These use sunlight to water crops—no fuel needed! 🌞💦</li>
+            </ol>
 </body>
 </html>

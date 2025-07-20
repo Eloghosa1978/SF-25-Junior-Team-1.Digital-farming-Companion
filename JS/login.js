@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded", function () {
       hasError = true;
     }
     if (!hasError) {
-      window.location.href = "./Dashboard/index.html";
+      window.location.href = "./Dashboard/dashboard.html";
     }
   });
 });

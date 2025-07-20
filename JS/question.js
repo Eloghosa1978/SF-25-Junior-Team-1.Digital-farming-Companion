@@ -276,3 +276,76 @@ const greenSmartFarming = {
     },
   ],
 };
+
+// Exercise Part
+//Exercise for seasonal farming
+const seasonalFarming = {
+  questions: [
+    {
+      id: 1,
+      text: "All Crops Grow best in the rainy season",
+      answer: "1",
+      options: ["True", "False"],
+    },
+    {
+      id: 2,
+      text: "Farmers plant crops in the dry season",
+      answer: "0",
+      options: ["True", "False"],
+    },
+    {
+      id: 3,
+      text: "The wet season is when it rains a lot",
+      answer: "0",
+      options: ["True", "False"],
+    },
+    {
+      id: 4,
+      text: "Farmers can plant any crop any time of the year",
+      answer: "1",
+      options: ["True", "False"],
+    },
+  ],
+};
+const cropFarmingExercises = {
+  questions: [
+    {
+      id: "q1",
+      text: "What is the main purpose of crop farming?",
+      options: [
+        "To grow plants for food",
+        "To raise animals",
+        "To build houses",
+      ],
+      answer: 0,
+    },
+    {
+      id: "q2",
+      text: "Which season is best for planting most crops?",
+      options: ["Rainy season", "Dry season", "Winter"],
+      answer: 0,
+    },
+    {
+      id: "q3",
+      text: "What do farmers use to protect crops from pests?",
+      options: ["Fertilizers", "Pesticides", "Water"],
+      answer: 1,
+    },
+    {
+      id: "q4",
+      text: "What is a common tool used in crop farming?",
+      options: ["Hammer", "Hoe", "Spoon"],
+      answer: 1,
+    },
+    {
+      id: "q5",
+      text: "Why do farmers rotate crops each year?",
+      options: [
+        "To make the soil healthier",
+        "To grow the same crop every year",
+        "To scare away birds",
+      ],
+      answer: 0,
+    },
+  ],
+};

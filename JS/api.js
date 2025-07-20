@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 // Your API key - REMEMBER THE SECURITY WARNING!
 // For a production application, this should be handled securely on a backend server.
-const API_KEY = "AIzaSyBwqNCZrwP68mI-ZxM9nersYIryn6DDmYs";
+const API_KEY = "AIzaSyAOD1a9z16CR1npX73KKb9qAc017sCcTJc";
 
 // Initialize the Generative AI client with your API key
 const genAI = new GoogleGenerativeAI(API_KEY);
@@ -42,7 +42,7 @@ function addMessage(message, sender) {
   messageElement.classList.add("d-flex", "mb-2"); // Bootstrap flexbox for alignment
   const formatted = message
     .replace(/\n/g, "<br>")
-    .replace(/\*(.*?)\*/g, "<strong>$1</strong>");
+    .replace(/\*(.*?)\*/g, "<b>$1</b>");
   const messageContent = document.createElement("div");
   messageContent.classList.add("p-2", "rounded", "shadow-sm"); // Bootstrap styling for message bubble
   messageContent.innerHTML = formatted; // Set the message text
@@ -93,7 +93,13 @@ async function sendMessageToGemini(message) {
   const fullPrompt = systemPrompt + message;
 
   try {
-    const result = await model.generateContent(fullPrompt);
+    const result = await model.generateContent(fullPrompt, {
+      contents: [
+        systemInstruction,
+        { role: "user", parts: [{ text: message }] },
+      ],
+    });
+
     const response = await result.response; // Get the raw response object
     const text = response.text(); // Extract the text content from the
 

@@ -17,14 +17,14 @@
   left: 0;
   background-color: #198754 !important;
   justify-items: center;
-  max-width: 250px;
-  min-width: 200px;
+  width: 220px;
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; */
-  padding: 100px 0 0 30px;
+  padding: 100px 0 0 20px;
   border-top-right-radius: -20px;
   height: 100%;
+  transition: all 0.2s ease-in-out;
 }
 
 .sidebar-div > div > ul > div {

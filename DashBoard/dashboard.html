@@ -27,11 +27,13 @@
     <nav id="nav" class=""></nav>
     <div class="d-flex flex-row">
       <section id="header"></section>
-      <!--Main Content-->>
-      <main class="justify-content-center w-100 mt-5 px-2">
+      <!--Main Content-->
+      <main class="justify-content-center container-fluid mt-5">
         <!---Hero Section-->
         <section class="mt-5 justify-content-center container-fluid" id="hero">
-          <div class="container-fluid justify-content-center text-center">
+          <div
+            class="container-fluid d-flex flex-column justify-content-center text-center"
+          >
             <div class="text-center mb-4">
               <h1 class="h1 text-center">
                 Welcome to AgriKids Adventures – Let's Grow Together
@@ -52,49 +54,50 @@
 
             <!--Card Section-->
             <div class="row my-4 justify-content-center">
-              <div class="col-12 col-md-6 mb-3 col-lg-4">
-                <div class="bg-light">
-                  <div class="justify-content-center">
-                    <div class="border-bottom c-t h-100 w-100 p-2">
-                      <h5 class="card-title text-center h2 text-success">
-                        Learn About Farming
-                      </h5>
-                    </div>
-                    <div class="c-b h-100 w-100 pb-3 p-2">
-                      <p class="card-text text-center h4">
-                        Learn about farm activities, crop growth and planting,
-                        and about animal rearing.
-                      </p>
-                      <div class="text-center">
-                        <a
-                          href="./learn.html"
-                          class="btn btn-success form-control w-50 fw-bold lead"
-                          >Start Learning Now</a
-                        >
-                      </div>
+              <div class="col-12 col-md-6 mb-3 col-lg-4 d-flex">
+                <div class="bg-light w-100 d-flex flex-column h-100">
+                  <div class="border-bottom c-t p-2">
+                    <h5 class="card-title text-center h2 text-success">
+                      Learn About Farming
+                    </h5>
+                  </div>
+                  <div
+                    class="c-b pb-3 p-2 flex-grow-1 d-flex flex-column"
+                    style="align-items: center; align-content: center"
+                  >
+                    <p class="card-text text-center h4">
+                      Learn about farm activities, crop growth and planting, and
+                      about animal rearing.
+                    </p>
+                    <div class="text-center mt-auto">
+                      <a
+                        href="./learn.html"
+                        class="btn btn-success form-control w-50 fw-bold lead"
+                        >Start Learning Now</a
+                      >
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="col-12 col-md-6 mb-3 col-lg-4">
-                <div class="bg-light">
-                  <div class="justify-content-center">
-                    <div class="border-bottom c-t h-100 w-100 p-2">
-                      <h5 class="card-title text-center h2 text-success">
-                        Test your strength
-                      </h5>
-                    </div>
-                    <div class="c-b h-100 p-2 pb-3">
-                      <p class="card-text c-b text-center h4">
-                        Play Exciting quizzes and win reward
-                      </p>
-                      <div class="text-center">
-                        <a
-                          href="./quiz.html"
-                          class="btn btn-success form-control w-50 fw-bold lead"
-                          >Play Quiz Now</a
-                        >
-                      </div>
+              <div class="col-12 col-md-6 mb-3 col-lg-4 d-flex">
+                <div class="bg-light w-100 d-flex flex-column h-100">
+                  <div class="border-bottom c-t p-2">
+                    <h5 class="card-title text-center h2 text-success">
+                      Test your strength
+                    </h5>
+                  </div>
+                  <div
+                    class="c-b p-2 pb-3 flex-grow-1 d-flex flex-column justify-content-between"
+                  >
+                    <p class="card-text c-b text-center h4">
+                      Play Exciting quizzes and win reward
+                    </p>
+                    <div class="text-center mt-auto">
+                      <a
+                        href="./quiz.html"
+                        class="btn btn-success form-control w-50 fw-bold lead"
+                        >Play Quiz Now</a
+                      >
                     </div>
                   </div>
                 </div>
