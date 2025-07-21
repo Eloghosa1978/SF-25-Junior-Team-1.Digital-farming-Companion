@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!-- <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
@@ -11,7 +11,7 @@
 
   <link rel="shortcut icon" href="../src/IMG/logo.png" type="image/x-icon">
 
-  <link rel="stylesheet" href="../style/api.css">
+  <link rel="stylesheet" href="../style/api.css"> 
 
   <style>
     body {
@@ -22,7 +22,7 @@
       background: lightgreen;
     }
 
-    head{
+    .head {
       background: seagreen;
       padding: 10px;
       color: white;
@@ -141,7 +141,7 @@
   </header>
   
   <div class="mb-5 text-center">
-  <head>
+  <head class="head">
   <h1 class="text-center">Animal Farming Wonderland</h1>
   <h5>Where Learning Meets Laughter In The World Of Agriculture!</h5>
   <p>Discover, Laugh, Learn about your favourite animals</p>
@@ -150,6 +150,9 @@
 
   <main class="">
     <div class="section">
+      <div class="imgi">
+        <img src="../src/IMG/image.png" alt="">
+      </div>
       <div class="section-content">
         <h2 class="text-success text-center my-5">What Is Animal Farming?</h2>
         <p>Animal farming is the rearing of animals for human use. It is also called livestock farming. People raise animals for different purposes such as food, clothing, medicine, labour, and income.</p>
@@ -225,6 +228,9 @@
     </div>
 
     <div class="impact rounded w-50 my-5 shadow-lg">
+      <div class="img">
+        <img src="../src/IMG/eioa images (4).png" alt="">      
+      </div>
       <div class="impact-animals p-3">
         <h2 class="text-success">Environmental Impact of Animal Farming</h2>
         <ul>
@@ -373,8 +379,727 @@
 
 
 
+  <!-- <script src="../JS/navbar.js"></script>
 
   <script src="../JS/api.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>  -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriKids Animal Farm</title>
+    <link rel="stylesheet" href="./CSS/styles.css" />
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../CSS/dashboard.css" />
+    <link rel="stylesheet" href="../CSS/dashboardNav.css" />
+    <link rel="stylesheet" href="../CSS/api.css" />
+    <style>
+        :root {
+            --primary: #4CAF50;
+            --secondary: #FF9800;
+            --light: #F5F5F5;
+            --dark: #333;
+            --accent: #8BC34A;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Neue', cursive;
+            background-color: #f9f9f9;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary);
+            color: white;
+            padding: 1rem 0;
+            text-align: center;
+            position: relative;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .logo {
+            font-family: 'Fredoka One', cursive;
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 0 rgba(0,0,0,0.1);
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        nav {
+            background-color: var(--accent);
+            padding: 0.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            gap: 1rem;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            background-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .hero {
+            background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.2)), url('https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/ab436def-7f52-4cba-a549-30cd71aed6fd.png');
+            background-size: cover;
+            background-position: center;
+            height: 50vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color: white;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 5px rgba(0,0,0,0.5);
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto;
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+
+        .section-title {
+            text-align: center;
+            margin: 2rem 0;
+            color: var(--primary);
+            font-family: 'Fredoka One', cursive;
+            font-size: 2rem;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: "";
+            display: block;
+            width: 100px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 0.5rem auto;
+        }
+
+        .animal-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .animal-card {
+            background-color: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .animal-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+
+        .animal-image {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .animal-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .animal-card:hover .animal-image img {
+            transform: scale(1.05);
+        }
+
+        .animal-info {
+            padding: 1.5rem;
+        }
+
+        .animal-info h3 {
+            color: var(--primary);
+            margin-bottom: 0.5rem;
+            font-family: 'Fredoka One', cursive;
+        }
+
+        .animal-info p {
+            margin-bottom: 1rem;
+        }
+
+        .btn {
+            display: inline-block;
+            background-color: var(--secondary);
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: var(--primary);
+            transform: scale(1.05);
+        }
+
+        .farm-facts {
+            background-color: var(--light);
+            padding: 2rem;
+            border-radius: 10px;
+            margin: 3rem 0;
+        }
+
+        .fact-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .fact-card {
+            text-align: center;
+            padding: 1.5rem;
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+        }
+
+        .fact-icon {
+            font-size: 3rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .fact-card h3 {
+            color: var(--secondary);
+            margin-bottom: 0.5rem;
+        }
+
+        .activities {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .activity-card {
+            flex: 1 1 300px;
+            background-color: white;
+            border-radius: 10px;
+            padding: 1.5rem;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .activity-card h3 {
+            color: var(--primary);
+            margin-bottom: 1rem;
+        }
+
+        .activity-card p {
+            flex-grow: 1;
+            margin-bottom: 1rem;
+        }
+
+        footer {
+            background-color: var(--dark);
+            color: white;
+            text-align: center;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 1rem 0;
+        }
+
+        .footer-links a {
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .footer-links a:hover {
+            color: var(--accent);
+        }
+
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin: 1rem 0;
+        }
+
+        .social-icons a {
+            color: white;
+            font-size: 1.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .social-icons a:hover {
+            transform: scale(1.2);
+            color: var(--accent);
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .hero p {
+                font-size: 1.1rem;
+            }
+
+            .animal-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* Interactive elements */
+        .quiz-container {
+            background-color: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.1);
+            margin: 2rem 0;
+            display: none;
+        }
+
+        .quiz-question {
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .quiz-option {
+            background-color: var(--light);
+            padding: 1rem;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .quiz-option:hover {
+            background-color: #e0e0e0;
+        }
+
+        .quiz-result {
+            text-align: center;
+            font-weight: bold;
+            margin-top: 1rem;
+            display: none;
+        }
+
+        .highlight {
+            background-color: #fffde7;
+            padding: 0.5rem;
+            border-radius: 5px;
+            margin: 1rem 0;
+        }
+    </style>
+</head>
+<body>
+    
+    <header>
+        <div class="logo">AgriKids</div>
+        <div class="tagline">Growing the farmers of tomorrow!</div>
+    </header>
+
+    <section class="hero position-relative d-flex align-items-center">
+        <img src="https://images.unsplash.com/photo-1470114716159-e389f8712fda" alt="Colorful farm landscape with animals" class="position-absolute w-100 h-100 object-fit-cover" style="z-index: -1;">
+        <div class="container text-white text-center">
+            <div class="bg-dark bg-opacity-50 p-4 rounded">
+                <h1 class="display-3 fw-bold">Welcome to the Animal Farm!</h1>
+                <p class="lead">Discover the wonderful world of farm animals and learn how they help us grow healthy food!</p>
+            </div>
+        </div>
+    </section>
+
+    <div class="container">
+        <section id="farm-animals">
+            <h2 class="section-title">Meet Our Farm Animals</h2>
+            
+            <div class="highlight">
+                <p>Did you know? Farm animals provide us with food, clothing, and help farmers with their work! Let's meet some of them.</p>
+            </div>
+
+            <div class="animal-grid">
+                <div class="animal-card card h-100 border-0 shadow-sm">
+                    <div class="animal-image card-img-top overflow-hidden" style="height: 200px;">
+                        <img src="https://images.unsplash.com/photo-1549313946-5d3e8d6b9d31" class="w-100 h-100 object-fit-cover" alt="Happy dairy cow grazing in green pasture">
+                    </div>
+                    <div class="card-body">
+                        <h3 class="card-title text-success">Cows</h3>
+                        <p class="card-text">Cows give us milk that we use to make cheese, yogurt, and ice cream! A dairy cow can produce about 30 liters of milk each day.</p>
+                        <button class="btn btn-orange" onclick="showFact('cow')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="animal-card">
+                    <div class="animal-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/8305a06b-b0d2-40e9-b30e-179d0dbb5f8a.png" alt="Fluffy chickens pecking at grain in sunny farmyard">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Chickens</h3>
+                        <p>Chickens lay eggs - about 250 per year! They also help control insects in the farm. Chickens are related to dinosaurs!</p>
+                        <button class="btn" onclick="showFact('chicken')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="animal-card">
+                    <div class="animal-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/aa78f36a-3c88-4488-88c5-beff441dd96f.png" alt="Pink pigs rolling in mud to stay cool on a farm">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Pigs</h3>
+                        <p>Pigs are very smart animals. They help recycle food waste by eating scraps. Pigs roll in mud to protect their skin from sunburn.</p>
+                        <button class="btn" onclick="showFact('pig')">Learn More</button>
+                    </div>
+                </div>
+
+                <div class="animal-card">
+                    <div class="animal-image">
+                        <img src="https://storage.googleapis.com/workspace-0f70711f-8b4e-4d94-86f1-2a93ccde5887/image/35a21bef-0c33-4064-8d55-55c3de824ac7.png" alt="White sheep grazing peacefully in green meadow">
+                    </div>
+                    <div class="animal-info">
+                        <h3>Sheep</h3>
+                        <p>Sheep give us wool to make warm clothes. A sheep can produce enough wool each year to make 10 sweaters!</p>
+                        <button class="btn" onclick="showFact('sheep')">Learn More</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="farm-life">
+            <h2 class="section-title">Life on the Farm</h2>
+            
+            <div class="farm-facts">
+                <h3>Fun Farm Facts</h3>
+                <div class="fact-grid">
+                    <div class="fact-card">
+                        <div class="fact-icon">🐄</div>
+                        <h3>Healthy Cows</h3>
+                        <p>A happy cow produces more milk! Farmers make sure cows have comfortable beds, good food, and plenty of water.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🥚</div>
+                        <h3>Egg Colors</h3>
+                        <p>Egg shells can be white, brown, blue, or green! The color depends on the hen's breed.</p>
+                    </div>
+                    <div class="fact-card">
+                        <div class="fact-icon">🐑</div>
+                        <h3>Sheep Shearing</h3>
+                        <p>Shearing sheep doesn't hurt them! It's like getting a haircut and helps keep them cool in summer.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="farm-activities">
+            <h2 class="section-title">Farm Activities</h2>
+            
+            <div class="activities">
+                <div class="activity-card">
+                    <h3>Morning Chores</h3>
+                    <p>Farmers wake up early to feed the animals, collect eggs, and milk the cows. Animals always eat breakfast before farmers do!</p>
+                    <button class="btn" onclick="showActivity('morning')">See Schedule</button>
+                </div>
+                <div class="activity-card">
+                    <h3>Animal Care</h3>
+                    <p>Farmers check animals every day to make sure they're healthy. They brush them, clean their homes, and call the vet when needed.</p>
+                    <button class="btn" onclick="showActivity('care')">Learn Care Tips</button>
+                </div>
+                <div class="activity-card">
+                    <h3>Harvest Time</h3>
+                    <p>At harvest time, farmers collect wool, milk, eggs, and other products. Then they prepare them for stores and markets.</p>
+                    <button class="btn" onclick="showActivity('harvest')">Harvest Steps</button>
+                </div>
+            </div>
+        </section>
+
+        <section id="farm-quiz">
+            <h2 class="section-title">Farm Quiz</h2>
+            <p>Test your farm knowledge with our fun quiz!</p>
+            <button class="btn" onclick="startQuiz()">Start Quiz</button>
+
+            <div class="quiz-container" id="quiz-1">
+                <div class="quiz-question">
+                    <h3>What do dairy cows give us every day?</h3>
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(1, 'a')">Eggs</div>
+                    <div class="quiz-option" onclick="checkAnswer(1, 'b')">Milk</div>
+                    <div class="quiz-option" onclick="checkAnswer(1, 'c')">Cheese</div>
+                    <div class="quiz-option" onclick="checkAnswer(1, 'd')">Wool</div>
+                </div>
+                <div class="quiz-result" id="result-1"></div>
+            </div>
+
+            <div class="quiz-container" id="quiz-2">
+                <div class="quiz-question">
+                    <h3>Why do pigs roll in mud?</h3>
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(2, 'a')">To play</div>
+                    <div class="quiz-option" onclick="checkAnswer(2, 'b')">To cool off</div>
+                    <div class="quiz-option" onclick="checkAnswer(2, 'c')">To protect their skin</div>
+                    <div class="quiz-option" onclick="checkAnswer(2, 'd')">Both b and c</div>
+                </div>
+                <div class="quiz-result" id="result-2"></div>
+            </div>
+
+            <div class="quiz-container" id="quiz-3">
+                <div class="quiz-question">
+                    <h3>How many eggs can a hen lay in a year?</h3>
+                </div>
+                <div class="quiz-options">
+                    <div class="quiz-option" onclick="checkAnswer(3, 'a')">About 50</div>
+                    <div class="quiz-option" onclick="checkAnswer(3, 'b')">About 100</div>
+                    <div class="quiz-option" onclick="checkAnswer(3, 'c')">About 250</div>
+                    <div class="quiz-option" onclick="checkAnswer(3, 'd')">About 500</div>
+                </div>
+                <div class="quiz-result" id="result-3"></div>
+            </div>
+        </section>
+    </div>
+
+    
+    <script>
+        // Animal facts
+        const animalFacts = {
+            cow: {
+                fact: "Cows have best friends and get stressed when separated from them!",
+                diet: "Grass, hay, and special cow food",
+                product: "Milk (can make 90 glasses per day!)",
+                fun: "Cows can smell something 6 miles away"
+            },
+            chicken: {
+                fact: "Chickens have over 30 distinct calls to communicate different messages!",
+                diet: "Grains, seeds, insects, and vegetables",
+                product: "Eggs (about 250 per year)",
+                fun: "Chickens dream when they sleep, just like humans"
+            },
+            pig: {
+                fact: "Pigs are among the smartest animals, smarter than dogs!",
+                diet: "Vegetables, grains, and specially made pig food",
+                product: "Pork (bacon, ham, sausages)",
+                fun: "Pigs don't sweat, that's why they like mud"
+            },
+            sheep: {
+                fact: "Sheep recognize other sheep faces and remember them for years!",
+                diet: "Grass, hay, and special sheep feed",
+                product: "Wool (enough for 10 sweaters per year)",
+                fun: "Sheep have rectangular pupils that give them excellent vision"
+            }
+        };
+
+        function showFact(animal) {
+            const fact = animalFacts[animal];
+            alert(`${animal.toUpperCase()} FACT:\n\nFun Fact: ${fact.fact}\n\nDiet: ${fact.diet}\n\nProducts: ${fact.product}\n\nCool Fact: ${fact.fun}`);
+        }
+
+        function showActivity(activity) {
+            let message = "";
+            switch(activity) {
+                case 'morning':
+                    message = "Typical Morning Schedule:\n5:30 AM - Wake up\n6:00 AM - Feed animals\n6:30 AM - Milk cows\n7:00 AM - Collect eggs\n7:30 AM - Check animals' health\n8:00 AM - Farmer's breakfast!";
+                    break;
+                case 'care':
+                    message = "Animal Care Tips:\n1. Always approach animals calmly\n2. Check for signs of illness daily\n3. Keep living areas clean\n4. Provide fresh water always\n5. Give animals space when needed";
+                    break;
+                case 'harvest':
+                    message = "Harvest Steps:\n1. Collect eggs (morning)\n2. Milk cows (twice daily)\n3. Shear sheep (spring)\n4. Collect wool and wash it\n5. Pack products safely\n6. Store or transport properly";
+                    break;
+            }
+            alert(message);
+        }
+
+        function startQuiz() {
+            document.querySelectorAll('.quiz-container').forEach(el => {
+                el.style.display = 'block';
+            });
+            document.getElementById('quiz-1').scrollIntoView({behavior: 'smooth'});
+        }
+
+        function checkAnswer(quizNum, selected) {
+            const answers = {
+                1: 'b',
+                2: 'd',
+                3: 'c'
+            };
+            
+            const resultElement = document.getElementById(`result-${quizNum}`);
+            
+            if (selected === answers[quizNum]) {
+                resultElement.textContent = "Correct! Great job!";
+                resultElement.style.color = "green";
+            } else {
+                resultElement.textContent = "Oops! Try again!";
+                resultElement.style.color = "red";
+            }
+            
+            resultElement.style.display = 'block';
+        }
+
+        // Interactive hover effect for animal cards
+        document.addEventListener('DOMContentLoaded', function() {
+            const animalCards = document.querySelectorAll('.animal-card');
+            
+            animalCards.forEach(card => {
+                card.addEventListener('mouseenter', function() {
+                    this.style.transform = 'scale(1.02)';
+                    this.querySelector('.btn').style.backgroundColor = '#4CAF50';
+                });
+                
+                card.addEventListener('mouseleave', function() {
+                    this.style.transform = '';
+                    this.querySelector('.btn').style.backgroundColor = '#FF9800';
+                });
+            });
+        });
+    </script>
+
+    <div class="chat-btn" style="z-index: 100">
+          <button class="btn" onclick="openChat()">
+            <img src="../src/IMG/chat-mascot.png" alt="" />
+          </button>
+        </div>
+        <section class="chat-box-container" id="chat-container">
+          <div class="container-sm mt-5 shadow-lg">
+            <div class="card">
+              <div
+                class="card-header bg-primary text-white justify-content-around row align-content-center"
+                style="align-items: center; display: flex"
+              >
+                <div class="float-start col-10">
+                  <h5 class="mb-0">AgriKids learn assistant</h5>
+                </div>
+
+                <div class="float-end col-2">
+                  <button
+                    onclick="closeChat()"
+                    class="btn btn-outline-warning rounded rounded-circle"
+                    style="width: 40px; height: 40px; text-align: center"
+                  >
+                    <i
+                      class="bi bi-x"
+                      style="
+                        font-size: 40px;
+                        font-weight: 700;
+                        position: relative;
+                        top: -15px;
+                        left: -15px;
+                      "
+                    ></i>
+                  </button>
+                </div>
+              </div>
+              <div class="card-body chat-box" id="chat-box">
+                <div class="d-flex justify-content-start mb-2">
+                  <div class="p-2 bg-light rounded shadow-sm">
+                    Hello! I am Agi your learning assistant, How can I help you
+                    today?
+                  </div>
+                </div>
+              </div>
+              <div class="card-footer d-flex justify-content-around">
+                <textarea
+                  id="user-input"
+                  class="form-control rounded-pill px-4 py-2"
+                  placeholder="Type your message here..."
+                  style="
+                    resize: none;
+                    height: 100px;
+                    border: 1.5px solid #ffd54f;
+                    max-width: 70%;
+                    font-size: 20px;
+                    font-weight: 400;
+                  "
+                ></textarea>
+                <button
+                  class="btn btn-success rounded-pill d-flex justify-content-center align-items-center"
+                  style="width: 100px; height: 50px; align-self: center"
+                  id="send-button"
+                >
+                  <span class="material-symbols-rounded">send</span>
+                </button>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script type="module" src="../JS/api.js"></script>
+    <script src="../JS/navbar.js"></script>
+    <script src="../JS/dashboard.js"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
