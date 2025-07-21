@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#hero {
+  background-image: url("../src/IMG/green-smart-1.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 70%;
+}
+.hero-text {
+  background-image: linear-gradient(
+    to right,
+    rgb(49, 139, 255),
+    rgb(255, 117, 98),
+    rgb(149, 235, 38)
+  );
+  background-clip: text;
+  color: transparent;
+}

@@ -34,3 +34,12 @@ function showNav() {
   const nav = document.querySelector(".sidebar-div");
   nav.style.width = "220px";
 }
+
+// Active class for the current page
+// links.forEach((link) => {
+//   if (link.href === window.location.href) {
+//     link.classList.add("active");
+//   } else {
+//     link.classList.remove("active");
+//   }
+// });
