@@ -18,13 +18,13 @@
   background-color: #198754 !important;
   justify-items: center;
   width: 220px;
-  /* overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap; */
+  overflow: hidden;
+  white-space: nowrap;
   padding: 100px 0 0 20px;
   border-top-right-radius: -20px;
   height: 100%;
   transition: all 0.2s ease-in-out;
+  text-overflow: ellipsis;
 }
 
 .sidebar-div > div > ul > div {

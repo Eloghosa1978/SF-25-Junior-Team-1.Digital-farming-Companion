@@ -20,5 +20,22 @@
     rgb(149, 235, 38)
   );
   background-clip: text;
+  backdrop-filter: blur(5px);
+  height: 250px;
+  background: rgba(255, 255, 255, 0.212);
+}
+
+.hero-text > h1 {
+  -webkit-text-stroke: 2px rgb(72, 189, 5);
   color: transparent;
+}
+.hero-text > p {
+  font-weight: 400;
+}
+
+main {
+  justify-items: center;
+  width: 100%;
+  justify-content: center;
+  justify-self: center;
 }
