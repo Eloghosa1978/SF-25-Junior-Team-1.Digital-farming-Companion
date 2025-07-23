@@ -33,8 +33,9 @@ window.onload = () => {
 // For Animal Farming
 function animalCheckAnswers() {
   let score = 0;
+  let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
 
-  cropFarming.questions.forEach((q) => {
+  animalFarming.questions.forEach((q) => {
     const selected = document.querySelector(`input[name="${q.id}"]:checked`);
     const correctAnswer = q.answer;
     if (selected && Number(selected.value.trim()) === correctAnswer) {
@@ -42,7 +43,7 @@ function animalCheckAnswers() {
     }
   });
 
-  const percentage = (score / testData.questions.length) * 100;
+  const percentage = (score / animalFarming.questions.length) * 100;
   const resultDiv = document.getElementById("result");
 
   const userName = prompt("Enter your name for the badge:");
@@ -73,6 +74,21 @@ function animalCheckAnswers() {
         </div>
       `;
   }
+
+  // Save achievement
+  achievements.push({
+    title: "Completed AnimalFarming Quiz",
+    score: `${percentage}%`,
+    user: userName,
+    date: new Date().toLocaleDateString(),
+  });
+
+  localStorage.setItem(
+    "achievements-animal-farming",
+    JSON.stringify(achievements)
+  );
+  console.log("Achievements saved:", achievements);
+  displayAchievements(achievements);
 }
 
 function downloadBadge() {
