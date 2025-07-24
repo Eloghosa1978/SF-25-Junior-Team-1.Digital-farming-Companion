@@ -1,6 +1,7 @@
 document.addEventListener("DOMContentLoaded", function () {
   document.querySelector("form").addEventListener("submit", function (event) {
     const form = document.querySelector("form");
+    const name = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
 
@@ -12,9 +13,10 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     event.preventDefault();
-    console.log(email, password);
+    console.log(name, password);
+    localStorage.setItem("userName", name);
 
-    if (!email || !password) {
+    if (!email || !password || !name) {
       let p = document.createElement("p");
       p.innerText = "Please fill in all fields";
       p.className = "error-message";

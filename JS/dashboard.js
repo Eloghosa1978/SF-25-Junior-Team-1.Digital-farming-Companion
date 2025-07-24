@@ -89,3 +89,8 @@ function closeChat() {
 
   chat.classList.remove("open-chat-box");
 }
+
+// Acccessing the user name from localStorage
+const userName = localStorage.getItem("userName");
+
+document.getElementById("userName").innerText = userName ? userName : "Guest";

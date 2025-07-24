@@ -45,8 +45,18 @@ function showNav() {
     },
     { once: true }
   );
-  nav.addEventListener("mouseenter", showNav);
-  nav.addEventListener("mouseleave", hideNav);
+  nav.addEventListener("mouseenter", () => {
+    showNav();
+    nav.style.zIndex = "1000";
+    nav.style.position = "fixed";
+    nav.classList.add("shadow-lg");
+  });
+  nav.addEventListener("mouseleave", () => {
+    hideNav();
+    nav.style.zIndex = "1000";
+    nav.style.position = "";
+    nav.classList.remove("shadow-lg");
+  });
 }
 
 // Active class for the current page

@@ -33,7 +33,6 @@ window.onload = () => {
 // For Animal Farming
 function animalCheckAnswers() {
   let score = 0;
-  let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
 
   animalFarming.questions.forEach((q) => {
     const selected = document.querySelector(`input[name="${q.id}"]:checked`);
@@ -76,6 +75,7 @@ function animalCheckAnswers() {
   }
 
   // Save achievement
+  let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
   achievements.push({
     title: "Completed AnimalFarming Quiz",
     score: `${percentage}%`,
@@ -88,7 +88,6 @@ function animalCheckAnswers() {
     JSON.stringify(achievements)
   );
   console.log("Achievements saved:", achievements);
-  displayAchievements(achievements);
 }
 
 function downloadBadge() {

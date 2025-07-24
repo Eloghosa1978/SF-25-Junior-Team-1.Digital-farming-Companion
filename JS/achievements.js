@@ -5,7 +5,7 @@ const container = document.getElementById("achievementsList");
 
 achievements.forEach((achievement) => {
   const item = document.createElement("div");
-  item.className = "achievement-item";
+  item.className = "achievement-item col-md-4 mb-3 col-sm-6 col-lg-3 shadow-lg";
   item.innerHTML = `<strong>${achievement.title}</strong><br><small>${achievement.date}</small>`;
   container.appendChild(item);
 });
