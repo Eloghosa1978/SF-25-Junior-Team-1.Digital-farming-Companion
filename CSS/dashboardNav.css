@@ -150,3 +150,13 @@ nav {
 .active {
   background-color: #a8c7b85d;
 }
+
+.footer {
+  background-color: #76ac7a7c;
+  padding: 2px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+  color: rgb(36, 32, 32);
+}

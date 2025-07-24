@@ -13,8 +13,11 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
     />
     <link rel="stylesheet" href="./CSS/register.css" />
+    <link rel="stylesheet" href="./CSS/styles.css" />
   </head>
   <body>
+    <nav id="header"></nav>
+
     <div
       class="justify-content-center row container-lg p-3 text-cent"
       style="justify-self: center"
@@ -44,6 +47,10 @@
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="Enter Email"
                 id="name"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="Tooltip on left"
+                data-bs-custom-class="custom-tooltip"
               />
             </div>
           </div>
@@ -59,6 +66,10 @@
                 aria-label="Amount (to the nearest dollar)"
                 placeholder="Enter Name"
                 id="name"
+                data-bs-toggle="tooltip"
+                data-bs-placement="top"
+                data-bs-title="Tooltip on left"
+                data-bs-custom-class="custom-tooltip"
               />
             </div>
           </div>
@@ -73,6 +84,10 @@
                 type="password"
                 class="form-control"
                 aria-label="Amount (to the nearest dollar)"
+                data-bs-toggle="tooltip"
+                data-bs-custom-class="custom-tooltip"
+                data-bs-placement="top"
+                data-bs-title="Enter password"
                 placeholder="Password"
                 id="password"
               />
@@ -81,28 +96,39 @@
               ></span>
             </div>
           </div>
-            <div class="mb-3 form-check">
-                <input
-                type="checkbox"
-                class="form-check-input"
-                id="remember-me"
-                />
-                <label class="form-check-label" for="remember-me">Remember Me</label>
+          <div class="mb-3 form-check">
+            <input type="checkbox" class="form-check-input" id="remember-me" />
+            <label class="form-check-label" for="remember-me"
+              >Remember Me</label
+            >
 
-          <button
-            type="submit"
-            class="btn btn-warning form-control text-white fw-bold p-2 mb-2"
-          >
-            Log In
-          </button>
+            <button
+              type="submit"
+              class="btn btn-warning form-control text-white fw-bold p-2 mb-2"
+            >
+              Log In
+            </button>
 
-          <p class="text-center mt-3">
-            Don't have an account? <a href="./register.html">Register here</a>
-          </p>
+            <p class="text-center mt-3">
+              Don't have an account? <a href="./register.html">Register here</a>
+            </p>
+          </div>
         </form>
       </div>
     </div>
 
     <script src="./JS/login.js"></script>
+    <script>
+      const tooltipTriggerList = document.querySelectorAll(
+        '[data-bs-toggle="tooltip"]'
+      );
+      const tooltipList = [...tooltipTriggerList].map(
+        (tooltipTriggerEl) => new bootstrap.Tooltip(tooltipTriggerEl)
+      );
+    </script>
+
+    <script src="./JS/index.js"></script>
+    <script src="./JS/login.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
   </body>
 </html>

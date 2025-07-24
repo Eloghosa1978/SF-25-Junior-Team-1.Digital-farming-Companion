@@ -210,3 +210,46 @@ a.activea {
   color: beige;
   border-radius: 5px;
 }
+.highlights {
+  background: linear-gradient(135deg, #bbf3bd, #4caf4fcb);
+  transition: all 0.4s ease-out;
+}
+.highlights:hover {
+  box-shadow: 3px 2px 20px #0f0f0f62;
+  position: relative;
+  z-index: 1000px;
+  background: linear-gradient(to right, #bbf3bd, #4caf4fcb);
+  transform: translateY(-20%);
+}
+
+.highlights-container {
+  background-color: #eafcebb7;
+  justify-self: center;
+  box-shadow: 3px 0px 10px #0f0f0f34, 0px 0px 12px #0f0f0f4b,
+    0px 0px 0px #0f0f0f46, 1px 0px 30px #0f0f0f2d;
+}
+
+.highlights > h2 {
+  color: #00b7ff;
+}
+.highlights > p {
+  color: #d44545;
+  font-size: 20px;
+}
+
+.head {
+  color: #1ea11e;
+}
+.head::after {
+  content: "";
+  padding: 5px;
+  border-radius: 10px;
+  background-color: #d44545;
+  position: absolute;
+  top: 50px;
+  justify-self: center;
+  align-self: center;
+  width: 20%;
+  left: 40%;
+  min-width: 100px;
+}
