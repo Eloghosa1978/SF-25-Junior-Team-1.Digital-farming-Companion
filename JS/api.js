@@ -14,17 +14,13 @@ const genAI = new GoogleGenerativeAI(API_KEY);
 // Changed from "gemini-pro" to "gemini-1.5-flash" to resolve the 404 API error.
 // "gemini-1.5-flash" is recommended for general, fast chat applications.
 // You could also use "gemini-1.5-pro" for more complex reasoning.
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+const model = genAI.getGenerativeModel({
+  model: "gemini-1.5-flash",
+  systemInstruction:
+    "You are Agi, a cheerful chatbot who helps children aged 8–12 learn about farming. Do not Intoduce yourself only if they ask you to. Use simple words, short answers, and fun emojis like 🌾 and 🐄. Use *asterisks* around important words and \n for new lines. If a question is asked, answer them giving catching and fun examples.",
+});
 
 // System Instuctions
-const systemInstruction = {
-  role: "system",
-  parts: [
-    {
-      text: "You are FolaBot, a cheerful and helpful chatbot that teaches children about farming. Use simple language, short sentences, and fun emojis.",
-    },
-  ],
-};
 
 // Get references to DOM elements
 const chatBox = document.getElementById("chat-box");
@@ -88,17 +84,12 @@ function addMessage(message, sender) {
 async function sendMessageToGemini(message) {
   addMessage(message, "user");
   userInput.value = "";
-  const systemPrompt =
-    "You are Agi, a cheerful chatbot who helps children aged 8–12 learn about farming. Use simple words, short answers, and fun emojis like 🌾 and 🐄. Use *asterisks* around important words and \n for new lines. Introduce yourself only on the first text being sent like 'hello', 'hi' and any other word that simplifies greeting. If a question is asked answer them giving catching and fun examples.";
-  const fullPrompt = systemPrompt + message;
+  // const systemPrompt =
+  //
+  // const fullPrompt = systemPrompt + message;
 
   try {
-    const result = await model.generateContent(fullPrompt, {
-      contents: [
-        systemInstruction,
-        { role: "user", parts: [{ text: message }] },
-      ],
-    });
+    const result = await model.generateContent(message);
 
     const response = await result.response; // Get the raw response object
     const text = response.text(); // Extract the text content from the

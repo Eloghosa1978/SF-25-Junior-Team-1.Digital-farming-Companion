@@ -44,8 +44,7 @@ function animalCheckAnswers() {
 
   const percentage = (score / animalFarming.questions.length) * 100;
   const resultDiv = document.getElementById("result");
-
-  const userName = prompt("Enter your name for the badge:");
+  const userName = localStorage.getItem("username");
 
   if (percentage >= 70) {
     resultDiv.innerHTML = `
@@ -74,20 +73,30 @@ function animalCheckAnswers() {
       `;
   }
 
-  // Save achievement
-  let achievements = JSON.parse(localStorage.getItem("achievements")) || [];
-  achievements.push({
-    title: "Completed AnimalFarming Quiz",
+  // Save Achievement
+
+  const category = "Animal-Farming";
+  const storageKey = `achievements-${category}`;
+
+  let achievements = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+  let newAchievement = {
+    title: `Completed ${category.replace("-", " ")} Quiz`,
     score: `${percentage}%`,
     user: userName,
     date: new Date().toLocaleDateString(),
-  });
+  };
 
-  localStorage.setItem(
-    "achievements-animal-farming",
-    JSON.stringify(achievements)
+  // ✅ Only check for duplicate title & user
+  const alreadyExists = achievements.some(
+    (a) => a.title === newAchievement.title && a.user === newAchievement.user
   );
-  console.log("Achievements saved:", achievements);
+
+  if (!alreadyExists) {
+    achievements.push(newAchievement);
+    localStorage.setItem(storageKey, JSON.stringify(achievements));
+    console.log(`Achievements for ${category} saved:`, achievements);
+  }
 }
 
 function downloadBadge() {
