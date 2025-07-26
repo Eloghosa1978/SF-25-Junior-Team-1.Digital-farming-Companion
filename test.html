@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test Code Using Intersection Observer in JavaScript</title>
+    <style>
+      .animate-on-scroll {
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+      }
+
+      .animate-on-scroll.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="animate-on-scroll">
+      <h2>Learn About Crop Care</h2>
+      <p>This section will animate when you scroll into view.</p>
+    </section>
+
+    <script>
+      const sections = document.querySelectorAll("section");
+
+      const observer = new IntersectionObserver(
+        (entry) => {
+          entry.forEach((entry) => {
+            if (entry.isIntersecting) {
+              entry.target.classList.add("visible");
+              // If you only want it to animate once, unobserve after triggering
+              observer.unobserve(entry.target);
+            }
+          });
+        },
+        {
+          threshold: 0.1, // Adjust this for when it should trigger (10% visible)
+        }
+      );
+
+      sections.forEach((section) => {
+        observer.observe(section);
+      });
+    </script>
+  </body>
+</html>

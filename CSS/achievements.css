@@ -1,0 +1,26 @@
+.achievement-item {
+  background-color: rgb(177, 219, 255);
+  font-size: large;
+  max-width: 450px;
+  min-width: 250px;
+  height: 25vh;
+}
+.achievement-item > strong {
+  font-size: 25px;
+  justify-self: center;
+  background: linear-gradient(135deg, rgb(255, 73, 73), rgb(97, 187, 61));
+  background-clip: text;
+  color: transparent;
+}
+
+.score {
+  font-size: 25px;
+  font-weight: 500;
+  color: green;
+}
+.date {
+  font-size: 20px;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-weight: 450;
+}

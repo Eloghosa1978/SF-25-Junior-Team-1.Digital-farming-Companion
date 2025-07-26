@@ -28,35 +28,7 @@ window.onload = () => {
 
     cropFarmingContainer.appendChild(div);
   });
-
-  // Exercises
-  const exerciseContainer = document.getElementById("exercise-questions");
-  cropFarmingExercise.questions.forEach((q) => {
-    const div = document.createElement("div");
-    div.className = "mb-4 p-3 border rounded bg-white";
-    let optionsHTML = "";
-
-    q.options.forEach((opt, idx) => {
-      optionsHTML += `
-          <div class="form-check">
-            <input class="form-check-input" type="radio" name="${q.id}" id="${q.id}_${idx}" value="${opt}"
-              onclick="checkAnswer('${q.id}', '${opt}')">
-            <label class="form-check-label" id="${q.id}_label_${idx}" for="${q.id}_${idx}">
-              ${opt}
-            </label>
-          </div>
-        `;
-    });
-
-    div.innerHTML = `
-      <p class="fw-bold">${q.text}</p>
-      ${optionsHTML}
-      <br/>
-    `;
-    exerciseContainer.appendChild(div);
-  });
 };
-
 // For crop Farming
 function cropCheckAnswers() {
   let score = 0;
@@ -72,7 +44,7 @@ function cropCheckAnswers() {
   const percentage = (score / cropFarming.questions.length) * 100;
   const resultDiv = document.getElementById("result");
 
-  const userName = prompt("Enter your name for the badge:");
+  const userName = localStorage.getItem("username") ? userName : "Guest";
 
   if (percentage >= 60) {
     resultDiv.innerHTML = `
@@ -100,6 +72,28 @@ function cropCheckAnswers() {
         </div>
       `;
   }
+}
+const category = "Crop-Farming"; // Change this per quiz
+const storageKey = `achievements-${category}`;
+
+let achievements = JSON.parse(localStorage.getItem(storageKey)) || [];
+
+let newAchievement = {
+  title: `Completed ${category.replace("-", " ")} Quiz`,
+  score: `${percentage}%`,
+  user: userName,
+  date: new Date().toLocaleDateString(),
+};
+
+// ✅ Only check for duplicate title & user
+const alreadyExists = achievements.some(
+  (a) => a.title === newAchievement.title && a.user === newAchievement.user
+);
+
+if (!alreadyExists) {
+  achievements.push(newAchievement);
+  localStorage.setItem(storageKey, JSON.stringify(achievements));
+  console.log(`Achievements for ${category} saved:`, achievements);
 }
 
 function downloadBadge() {

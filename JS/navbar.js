@@ -1,10 +1,11 @@
+const ancLink = document.querySelectorAll("#a-link");
 const links = document.querySelectorAll(".link");
-links.forEach((link) => {
+ancLink.forEach((link) => {
   if (
     link.href === window.location.href ||
     link.pathname === window.location.pathname
   ) {
-    link.classList.add("active");
+    link.className = "active";
   }
 });
 
@@ -45,18 +46,20 @@ function showNav() {
     },
     { once: true }
   );
-  nav.addEventListener("mouseenter", () => {
-    showNav();
-    nav.style.zIndex = "1000";
-    nav.style.position = "fixed";
-    nav.classList.add("shadow-lg");
-  });
-  nav.addEventListener("mouseleave", () => {
-    hideNav();
-    nav.style.zIndex = "1000";
-    nav.style.position = "";
-    nav.classList.remove("shadow-lg");
-  });
+  if (nav.style.width <= "220px") {
+    nav.addEventListener("mouseenter", () => {
+      showNav();
+      nav.style.zIndex = "1000";
+      nav.style.position = "fixed";
+      nav.classList.add("shadow-lg");
+    });
+    nav.addEventListener("mouseleave", () => {
+      hideNav();
+      nav.style.zIndex = "1000";
+      nav.style.position = "";
+      nav.classList.remove("shadow-lg");
+    });
+  }
 }
 
 // Active class for the current page

@@ -90,22 +90,20 @@ ul {
 .link {
   list-style: none;
   display: flex;
-  align-items: center;
   background-color: rgba(255, 0, 0, 0);
-  padding: 2px 5px;
+  padding: 2px 10px;
   width: 100%;
   margin: 5px 0;
-  border: none;
-  background-color: #9ce9c550 !important;
+  border: 20px solid #9ce9c58a;
   color: white;
   border: none;
-  position: relative;
+
   bottom: 20px;
-  left: 0;
-  transition: all 3s;
+
+  transition: all 0.3s;
 }
 .link:hover {
-  background-color: #76ac7a7c;
+  background-color: #9ce9c550;
 }
 .active {
   background-color: #a8c7b85d;

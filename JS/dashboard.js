@@ -91,6 +91,6 @@ function closeChat() {
 }
 
 // Acccessing the user name from localStorage
-const userName = localStorage.getItem("userName");
+const userName = localStorage.getItem("username");
 
-document.getElementById("userName").innerText = userName ? userName : "Guest";
+document.getElementById("username").textContent = userName ? userName : "Guest";

@@ -1,0 +1,13 @@
+.custom-tooltip {
+  --bs-tooltip-bg: var(--bs-green);
+  --bs-tooltip-color: var(--bs-white);
+}
+
+.error {
+  border-top: 3px solid red;
+  border-bottom: 3px solid red;
+  width: 100%;
+  background-color: rgba(255, 60, 54, 0.479);
+  border-left: none;
+  border-right: none;
+}
