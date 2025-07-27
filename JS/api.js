@@ -5,7 +5,7 @@ import { GoogleGenerativeAI } from "https://esm.run/@google/generative-ai";
 
 // Your API key - REMEMBER THE SECURITY WARNING!
 // For a production application, this should be handled securely on a backend server.
-const API_KEY = "AIzaSyD3XAI2i6XhGnK1X6eEaskdofNhBH9xi8g";
+const API_KEY = "AIzaSyCzVOx4BRPTtGIyewNwJK0qsIN8GuKkMm0";
 
 // Initialize the Generative AI client with your API key
 const genAI = new GoogleGenerativeAI(API_KEY);
