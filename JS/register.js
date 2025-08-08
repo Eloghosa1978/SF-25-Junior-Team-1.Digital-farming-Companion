@@ -1,11 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
-  document.getElementById("form").addEventListener("submit", function (event) {
+  document.querySelector("form").addEventListener("submit", function (event) {
     const form = document.getElementById("form");
     const fName = document.getElementById("fname").value.trim();
     const lName = document.getElementById("lname").value.trim();
     const email = document.getElementById("email").value.trim();
     const password = document.getElementById("password").value.trim();
-    const cPassword = document.getElementById("cpassword").value;
+    const cPassword = document.getElementById("cpassword").value.trim();
     const dob = document.getElementById("dob").value.trim();
 
     event.preventDefault();
@@ -15,7 +15,7 @@ document.addEventListener("DOMContentLoaded", function () {
       msg.remove();
     });
 
-    let hasError = false;
+    var hasError = false;
 
     console.log(fName, lName, email, password, cPassword, dob);
 

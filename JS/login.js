@@ -1,44 +1,69 @@
-document.addEventListener("DOMContentLoaded", function () {
-  document.querySelector("form").addEventListener("submit", function (event) {
-    const form = document.querySelector("form");
-    const name = document.getElementById("name").value.trim();
+document.addEventListener("DOMContentLoaded", () => {
+  const form = document.getElementById("login-form");
+  const errorMsg = document.getElementById("error-msg");
+  const errorContainer = document.getElementById("error-container");
+
+  form.addEventListener("submit", function (event) {
+    event.preventDefault(); // Always prevent default first
+
+    const username = document.getElementById("name").value.trim();
     const email = document.getElementById("email").value.trim();
-    const password = document.getElementById("password").value.trim();
 
-    let hasError = false;
+    // Reset error state
+    errorMsg.textContent = "";
+    errorContainer.style.display = "none";
 
-    const oldMes = form.querySelector(".error-message");
-    if (oldMes) {
-      oldMes.remove();
+    // Validation
+    if (!username || username.length < 3) {
+      errorMsg.textContent = "Username must be at least 3 characters long.";
+      errorContainer.style.display = "block";
+      return;
     }
 
-    event.preventDefault();
-    console.log(name, password);
-    localStorage.setItem("userName", name);
-
-    if (!email || !password || !name) {
-      let p = document.createElement("p");
-      p.innerText = "Please fill in all fields";
-      p.className = "error-message";
-      p.style.color = "red";
-      form.appendChild(p);
-      event.preventDefault();
-      hasError = true;
+    if (!email || !/\S+@\S+\.\S+/.test(email)) {
+      errorMsg.textContent = "Please enter a valid email address.";
+      errorContainer.style.display = "block";
+      return;
     }
 
-    if (!/\S+@\S+\.\S+/.test(email)) {
-      let p = document.createElement("p");
-      p.innerText = "Please enter a valid email address";
-      p.className = "error-message";
-      p.style.color = "red";
-      form.appendChild(p);
-      event.preventDefault();
-      hasError = true;
-    }
-    if (!hasError) {
-      window.location.href = "./Dashboard/dashboard.html";
-    }
+    // If validation passes:
+    localStorage.setItem("username", username);
+
+    // Redirect
+    window.location.href = "/DashBoard/dashboard.html";
   });
+
+  // // const name = document.getElementById("name").value.trim();
+  // // const email = document.getElementById("email").value.trim();
+  // // const password = document.getElementById("password").value.trim();
+  // let hasError = false;
+  // // event.preventDefault();
+  // // const oldMes = form.querySelector(".error-message");
+  // // if (oldMes) {
+  // //   oldMes.remove();
+  // // }
+  // // console.log(name, password);
+  // // if (!email || !password || !name) {
+  // //   let p = document.createElement("p");
+  // //   p.innerText = "Please fill in all fields";
+  // //   p.className = "error-message";
+  // //   p.style.color = "red";
+  // //   form.appendChild(p);
+  // //   event.preventDefault();
+  // //   hasError = true;
+  // // }
+  // // if (!/\S+@\S+\.\S+/.test(email)) {
+  // //   let p = document.createElement("p");
+  // //   p.innerText = "Please enter a valid email address";
+  // //   p.className = "error-message";
+  // //   p.style.color = "red";
+  // //   form.appendChild(p);
+  // //   event.preventDefault();
+  // //   hasError = true;
+  // // }
+  // window.location.href = "../DashBoard/dashboard.html";
+  // if (!hasError) {
+  // }
 });
 
 document
