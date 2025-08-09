@@ -15,24 +15,37 @@
     <style>
 
        @import url('https://fonts.cdnfonts.com/css/poppins');
-      .d{
-        display: inline-flex;
-        gap: 40px;
+      /* .d{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        max-width: 600px;
+        margin: auto;
       }
 
-      @media screen and (max-width: 100%) and (min-width: 100%) {
+       @media (max-width: 480px) {
         .card{
-          border:none;
+          width:100%;
         }
+        .i{
+          grid-template-columns: 1fr;
+        }
+        .d{
+          grid-template-columns: 1fr;
+        } 
       }
       .i{
-        display: inline-flex;
-        gap: 120px;
-      }
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); 
+        gap: 20px;
+        max-width: 600px;
+        margin: auto;
+      } */
       .b{
         border: 3px solid white;
         border-radius: 5px;
-        background: palegreen;
+        text-align: center;
+        border-bottom: 1px solid rgba(240, 240, 240);
       }
       
     img{
@@ -121,6 +134,13 @@
       font-size: 18px;
     }
 
+    /* .card {
+      display: grid;
+      gap: 2rem;
+      grid-template-columns:
+      repeat(auto-fit, minmax(400px, 1fr));
+    } */
+
     #scoreBox {
       display: none;
       text-align: center;
@@ -141,6 +161,125 @@
       background: white;
     }
 
+          body {
+        background-color: #fff;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+
+      .quiz-container {
+      background: white;
+      padding: 25px;
+      max-width: 650px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: green;
+    }
+
+    img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .options label:hover {
+      background-color: green;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      background: #0984e3;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color .5s;
+    }
+    .bd{
+      background: black;
+    }
+
+    button:hover {
+      background-color: green;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #scoreBox {
+      display: none;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: green;
+    }
+
+
+      .hero-text {
+        font-size: 50px;
+      }
+
+      main {
+        padding-bottom: 10px;
+      }
+
+      .hero-btn {
+        background-color: green;
+        border: none;
+        color: #fff;
+        width: 150px;
+        height: 50px;
+        pointer-events: none;
+      }
+
+      .hero-section {
+        padding-top: 120px;
+        padding-left: 30px;
+        background-image: url('./src/IMG/Learn\ image.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 550px;
+        border-radius: 5px;
+      }
+
+
+      
+
+
   
     </style>
 </head>
@@ -149,9 +288,25 @@
 
 
 <body class="container-fluid">
-  <div class="pi col-lg-12 col-md-6 col-sm-4 w-100">
-    <img src="./src/IMG/bg.png" alt="" class="w-100">
-  </div>
+
+  <header id="header"></header>
+
+  <main class="container-lg my-5 shadow-sm w-100 rounded">
+    
+      <div class="hero-section my-3">
+
+      <p class="hero-text fw-bold">Learn farming - 
+        <br>
+        From seed
+        <br>
+         to harvest</p>
+
+      <button class="hero-btn rounded p-10">Get Started</button>
+
+      </div>
+
+
+  </main>
 
   <!-- Hero Section -->
    <section class="hero">
@@ -165,129 +320,199 @@
   </div>
 
 
-  <!--Card Session-->
-    <h2 class="text-dark text-center my-5 fw-bold">COMMON CROPS WE GROW</h2>
-   
 
+  <h2 class="text-dark text-center my-5 fw-bold">COMMON CROPS WE GROW</h2>
+  <div class="d-inline-flex flex-wrap justify-content-center gap-4">
+  <div class="card" style="width: 18rem;">
+  <img src="./src/IMG/rice.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">RICE (Oryza Sativa)</p>
+  </div>
+</div>
 
-    <div class="d grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-    <div class="card-session-1">
-    <div class="px-3">
-        <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/rice.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center fw-bold"> RICE </p>
-      </div>
-    </div>
-    </div>
-    </div>
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/tomato.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">TOMATO</p>
+  </div>
+</div>
 
-    <div class="card-session-2">
-     <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/tomato.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center fw-bold"> TOMATO </p>
-      </div>
-    </div>
-    </div>
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/cocoa.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">COCOA</p>
+  </div>
+</div>
 
-    <div class="card-session-3">
-     <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/cocoa.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center fw-bold"> COCOA </p>
-      </div>
-    </div>
-    </div>
-    
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/cravn_corn.jpeg" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">CORN</p>
+  </div>
+</div>
+</div>
 
-    <div class="card-session-4">
-     <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/cravn_corn.jpeg" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text text-center fw-bold"> CORN </p>
-      </div>
-    </div>
-    </div>
-    </div>
-
-    <h2 class="fw-bold text-center py-5 px-5">FARM ANIMALS AND THEIR PRODUCTS</h2>
-    <div class="i">
-  <div class="card  shadow-lg border-rounded mx-3" style="width: 18rem;">
-      <img src="./src/IMG/Cow.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text fw-bold text-center"> A COW PRODUCE MILK </p>
-      </div>
-    </div>
-
-    <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/goat.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text fw-bold text-center"> A GOAT PRODUCE MEAT</p>
-      </div>
-    </div>
-
-
-    <div class="card shadow-lg border-rounded" style="width: 18rem;">
-      <img src="./src/IMG/pig.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text fw-bold text-center"> A PIG PRODUCE MEAT</p>
-      </div>
-    </div>
+  <h2 class="text-dark text-center my-5 fw-bold">FARM ANIMALS AND THEIR PRODUCTS</h2>
+  <div class="d-inline-flex flex-wrap justify-content-center gap-4">
+    <div class="card" style="width: 18rem;">
+  <img src="./src/IMG/Cow.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">A COW PRODUCES MILK</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/goat.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">A GOAT PRODUCES MEAT / MILK</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/pig.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">A PIG PRODUCES MEAT (PORK)</p>
+  </div>
+</div>
+<div class="card" style="width: 18rem;">
+  <img src="./src/IMG/sheep.png" class="card-img-top" alt="...">
+  <div class="card-body">
+    <p class="card-text">A SHEEP PRODUCES WOOL</p>
+  </div>
+</div>
   </div>
 
 
-<div class="card shadow-lg border-rounded my-5 mx-3" style="width: 18rem;">
-      <img src="./src/IMG/sheep.png" class="card-img-top" alt="...">
-      <div class="card-body">
-        <p class="card-text fw-bold text-center"> A SHEEP PRODUCE WOOL</p>
-        </div>
-      </div>
-    </div>
-  </div> 
-  </div>
-
-
-
-  <div class="container-lg col-lg-12 col-md-6 col-sm-3">
+<div class="container-lg col-lg-12 col-md-6 col-sm-3">
     <div class="row">
       <div class="my-5">
     <h2 class="b ">Branches Of Agriculture</h2>
-    <p class="fw-bold">Agriculture has several branches, including:</p>
-    <ul class="il fw-bold text-dark mx-3 p-3 px-3">
-      <li>Agronomy (crop production)</li>
-      <li>Horticulture (fruits, veggies, flowers)</li>
-      <li>Animal Husbandry (livestock)</li>
-      <li>Agricultural Engineering (machinery, irrigation)</li>
-      <li>Agricultural Economics (farm management)</li>
-    </ul>
-  </div>
-  </div>
-  </div>
-
-  <h2>Growth Stage Of Plants</h2>
-  <ul class=" pi fw-bold text-dark my-5 mx-3 py-5 px-3">
-  <li>Germination: Seed absorbs water, sprouts, and roots grow.</li>
-
-  <li>Seedling: Young plant develops leaves and starts photosynthesis.</li>
-
-  <li>Growth: Plant grows leaves, stems, and roots, increasing in size.</li>
-
-  <li>Flowering:Plant produces flowers, which eventually turn into fruits/seeds.</li>
-
-  <li>Maturity: Fruits/seeds ripen and are ready for harvest.</li>  
+    <p class="fw-bold text-center">Agriculture has several branches, including:</p>
+<div class="card" style="width: 100%; ">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Agronomy (crop production)</li>
+    <li class="list-group-item">Horticulture (fruits, veggies, flowers)</li>
+    <li class="list-group-item">Animal Husbandry (livestock)</li>
+    <li class="list-group-item">Agricultural Engineering (machinery, irrigation)</li>
+    <li class="list-group-item">Agricultural Economics (farm management)</li>
   </ul>
+</div>
 
-  <h2>Growth stage of animals</h2>
-  <ul class=" entry fw-bold text-dark my-5 mx-3 py-5 px-3">
-  <li>Birth:The animal is born</li>
-  <li>Neonatal: The newborn animal is dependent on its mother for care.</li>
-  <li>Weaning: The animal transitions to solid food.</li>
-  <li>Juvenile: The young animal grows and develops, becoming more independent.</li>
-  <li>Adolescence: The animal reaches sexual maturity and may start reproducing.</li>
-  <li>Adulthood: The animal is fully grown and capable of reproduction.</li>
-  <li>Old age: The animal shows signs of aging, such as reduced physical abilities.</li>
+<div class="container-lg col-lg-12 col-md-6 col-sm-3">
+    <div class="row">
+      <div class="my-5">
+    <h2 class="b ">Growth Stage Of Plants</h2>
+    <p class="fw-bold text-center">Plants don't just magically grow, they go through some processes and stages, some of which are:</p>
+<div class="card" style="width: 100%; ">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Germination: Seed absorbs water, sprouts, and roots grow.</li>
+    <li class="list-group-item">Seedling: Young plant develops leaves and starts photosynthesis.</li>
+    <li class="list-group-item">Growth: Plant grows leaves, stems, and roots, increasing in size.</li>
+    <li class="list-group-item">Flowering:Plant produces flowers, which eventually turn into fruits/seeds.</li>
+    <li class="list-group-item">Maturity: Fruits/seeds ripen and are ready for harvest.</li>
   </ul>
+</div>
+
+<div class="container-lg col-lg-12 col-md-6 col-sm-3">
+    <div class="row">
+      <div class="my-5">
+    <h2 class="b ">Growth Stage Of Animals</h2>
+    <p class="fw-bold text-center">Animals don't just magically grow, they go through some processes and stages, some of which are:</p>
+<div class="card" style="width: 100%; ">
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Birth:The animal is born</li>
+    <li class="list-group-item">Neonatal: The newborn animal is dependent on its mother for care.</li>
+    <li class="list-group-item">Weaning: The animal transitions to solid food.</li>
+    <li class="list-group-item">Juvenile: The young animal grows and develops, becoming more independent.</li>
+    <li class="list-group-item">Adolescence: The animal reaches sexual maturity and may start reproducing.</li>
+    <li class="list-group-item">Adulthood: The animal is fully grown and capable of reproduction.</li>
+    <li class="list-group-item">Old age: The animal shows signs of aging, such as reduced physical abilities.</li>
+  </ul>
+</div>
+
+
+
+<div class="accordion accordion-flush" id="accordionFlushExample">
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+        What did the banana say to the doctor?
+      </button>
+    </h2>
+    <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">"I'm not peeling well"</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+      Reveal a fun fact
+      </button>
+    </h2>
+    <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Goats have accents — somewhere there’s a goat that says “baaah” like it’s from London.</div>
+    </div>
+  </div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Why did the cow change to arts?
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Because it wanted to study moo-sic</div>
+    </div>
+  </div>
+</div>
+<div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+        Reveal a fun fact
+      </button>
+    </h2>
+    <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Sheep can recognize over 50 faces — and remember them for years!</div>
+    </div>
+  </div>
+</div>
+  <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        What did the lettuce say to the yam?
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Lettuce be friends</div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+        Reveal a fun fact
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">Cows have best friends and get stressed if they’re apart</div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+         What did the corn say to the butter?
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">"Stop spreading rumors"</div>
+    </div>
+    <div class="accordion-item">
+    <h2 class="accordion-header">
+      <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseFour" aria-expanded="false" aria-controls="flush-collapseFour">
+         What do you call a cow that just gave birth?
+      </button>
+    </h2>
+    <div id="flush-collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+      <div class="accordion-body">A moo-my</div>
+    </div>
+
+
+
+
   <h2 class="text-center fw-bold my-5">Test Your Knowledge with Our Quiz!</h2>
   <p class="text-center fw-bold">Think you know your crops and animals? Test your knowledge with our fun quiz game!</p>
   <p class="text-center fw-bold">Click the button below to start the quiz and see how much you know about the world of agriculture!</p>
