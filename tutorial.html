@@ -4,51 +4,413 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Agrikids Learn Page</title>
-</head>
-
-<style>
-  .body{
-    background-image: url('../SF-25-Junior-Team-1.Digital-farming-Companion/src/IMG/Zubby.png');
-  }
-</style>
-
-<link
+  <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="../../CSS/dashboard.css" />
+        <link rel="stylesheet" href="../../CSS/dashboard.css" />
     <link rel="stylesheet" href="../../CSS/dashboardNav.css" />
     <link rel="stylesheet" href="../../style/api.css" />
-<body>
+
+    <style>
+
+       @import url('https://fonts.cdnfonts.com/css/poppins');
+      .d{
+        display: inline-flex;
+        gap: 40px;
+      }
+
+      @media screen and (max-width: 100%) and (min-width: 100%) {
+        .card{
+          border:none;
+        }
+      }
+      .i{
+        display: inline-flex;
+        gap: 120px;
+      }
+      .b{
+        border: 3px solid white;
+        border-radius: 5px;
+        background: palegreen;
+      }
+      
+    img{
+      background-size: cover;
+      width: 100%;
+      height:50%;
+    }
+
+    .register-btn, .quiz-btn {
+      transform: translateX(50%);
+    }
+
+    body {
+      font-family: Verdana, Geneva, Tahoma, sans-serif;
+      padding: 20px;
+      color: #333;
+    }
+
+    .quiz-container {
+      background: white;
+      padding: 25px;
+      max-width: 650px;
+      margin: auto;
+      border-radius: 20px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    }
+
+    h1 {
+      text-align: center;
+      color: green;
+    }
+
+    img {
+      max-width: 100%;
+      height: 200px;
+      object-fit: contain;
+      margin-bottom: 15px;
+      border-radius: 10px;
+      border: 2px solid #ccc;
+    }
+
+    .question {
+      font-size: 20px;
+      margin-bottom: 15px;
+    }
+
+    .options label {
+      display: block;
+      margin: 8px 0;
+      padding: 10px;
+      border-radius: 10px;
+      background-color: #f1f1f1;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+
+    .options label:hover {
+      background-color: green;
+    }
+
+    .buttons {
+      margin-top: 20px;
+      text-align: center;
+    }
+
+    button {
+      background: #0984e3;
+      color: white;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 10px;
+      margin: 0 10px;
+      cursor: pointer;
+      transition: background-color .5s;
+    }
+
+    button:hover {
+      background-color: green;
+    }
+
+    #result {
+      margin-top: 15px;
+      font-weight: bold;
+      text-align: center;
+      font-size: 18px;
+    }
+
+    #scoreBox {
+      display: none;
+      text-align: center;
+      margin-top: 30px;
+      font-size: 20px;
+      color: green;
+    }
+    .il{
+      border: 2px solid palegreen;
+      background: mediumspringgreen;
+    }
+    .pi{
+      border: 2px solid palegreen;
+      background: white;
+    }
+    .entry{
+      border: 2px solid palegreen;
+      background: white;
+    }
+
+  
+    </style>
+</head>
+
+
+
+
+<body class="container-fluid">
+  <div class="pi col-lg-12 col-md-6 col-sm-4 w-100">
+    <img src="./src/IMG/bg.png" alt="" class="w-100">
+  </div>
 
   <!-- Hero Section -->
    <section class="hero">
   <div class="container-lg">
     <div class="row justify-content-center">
-      <div class="col-8 col-md-6 col-lg-3">
-      <h1 class="text-center text-lead fw-bold">Start Your Farm Adventure!</h1>
-      <p class="text-center text-lead fw-bold">From planting seeds to flying drones — explore the wild, green, and high-tech world of farming!</p>
-      
+      <div class="col-sm-3 col-md-6 col-lg-8">
+    <h1 class="text-dark text-center">🌾 Welcome to Agri Kids Adventures!</h1>
+    <p class="text-lead text-center fw-bold">Where young minds grow with every farm discovery! Start learning about crops, animals, and the amazing world of agriculture!</p>
+    </div>
+    </div>
+  </div>
+
+
+  <!--Card Session-->
+    <h2 class="text-dark text-center my-5 fw-bold">COMMON CROPS WE GROW</h2>
+   
+
+
+    <div class="d grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div class="card-session-1">
+    <div class="px-3">
+        <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/rice.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center fw-bold"> RICE </p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <div class="card-session-2">
+     <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/tomato.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center fw-bold"> TOMATO </p>
+      </div>
+    </div>
+    </div>
+
+    <div class="card-session-3">
+     <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/cocoa.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center fw-bold"> COCOA </p>
+      </div>
+    </div>
+    </div>
+    
+
+    <div class="card-session-4">
+     <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/cravn_corn.jpeg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text text-center fw-bold"> CORN </p>
+      </div>
+    </div>
+    </div>
+    </div>
+
+    <h2 class="fw-bold text-center py-5 px-5">FARM ANIMALS AND THEIR PRODUCTS</h2>
+    <div class="i">
+  <div class="card  shadow-lg border-rounded mx-3" style="width: 18rem;">
+      <img src="./src/IMG/Cow.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text fw-bold text-center"> A COW PRODUCE MILK </p>
+      </div>
+    </div>
+
+    <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/goat.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text fw-bold text-center"> A GOAT PRODUCE MEAT</p>
+      </div>
+    </div>
+
+
+    <div class="card shadow-lg border-rounded" style="width: 18rem;">
+      <img src="./src/IMG/pig.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text fw-bold text-center"> A PIG PRODUCE MEAT</p>
       </div>
     </div>
   </div>
-  <div class="">
-  <button class="text-success ">Start Exploring</button>
+
+
+<div class="card shadow-lg border-rounded my-5 mx-3" style="width: 18rem;">
+      <img src="./src/IMG/sheep.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <p class="card-text fw-bold text-center"> A SHEEP PRODUCE WOOL</p>
+        </div>
+      </div>
+    </div>
+  </div> 
   </div>
-  </section>
+
+
+
+  <div class="container-lg col-lg-12 col-md-6 col-sm-3">
+    <div class="row">
+      <div class="my-5">
+    <h2 class="b ">Branches Of Agriculture</h2>
+    <p class="fw-bold">Agriculture has several branches, including:</p>
+    <ul class="il fw-bold text-dark mx-3 p-3 px-3">
+      <li>Agronomy (crop production)</li>
+      <li>Horticulture (fruits, veggies, flowers)</li>
+      <li>Animal Husbandry (livestock)</li>
+      <li>Agricultural Engineering (machinery, irrigation)</li>
+      <li>Agricultural Economics (farm management)</li>
+    </ul>
+  </div>
+  </div>
+  </div>
+
+  <h2>Growth Stage Of Plants</h2>
+  <ul class=" pi fw-bold text-dark my-5 mx-3 py-5 px-3">
+  <li>Germination: Seed absorbs water, sprouts, and roots grow.</li>
+
+  <li>Seedling: Young plant develops leaves and starts photosynthesis.</li>
+
+  <li>Growth: Plant grows leaves, stems, and roots, increasing in size.</li>
+
+  <li>Flowering:Plant produces flowers, which eventually turn into fruits/seeds.</li>
+
+  <li>Maturity: Fruits/seeds ripen and are ready for harvest.</li>  
+  </ul>
+
+  <h2>Growth stage of animals</h2>
+  <ul class=" entry fw-bold text-dark my-5 mx-3 py-5 px-3">
+  <li>Birth:The animal is born</li>
+  <li>Neonatal: The newborn animal is dependent on its mother for care.</li>
+  <li>Weaning: The animal transitions to solid food.</li>
+  <li>Juvenile: The young animal grows and develops, becoming more independent.</li>
+  <li>Adolescence: The animal reaches sexual maturity and may start reproducing.</li>
+  <li>Adulthood: The animal is fully grown and capable of reproduction.</li>
+  <li>Old age: The animal shows signs of aging, such as reduced physical abilities.</li>
+  </ul>
+  <h2 class="text-center fw-bold my-5">Test Your Knowledge with Our Quiz!</h2>
+  <p class="text-center fw-bold">Think you know your crops and animals? Test your knowledge with our fun quiz game!</p>
+  <p class="text-center fw-bold">Click the button below to start the quiz and see how much you know about the world of agriculture!</p>
+  <a href="#quiz" class="btn btn-success quiz-btn w-50">Start Quiz</a>
+  <p class="text-center fw-bold">Ready to challenge yourself? Let’s go!</p>
+
+
+      <div class="quiz-container" id="quiz">
+    <h1>🌾 Agrikids Quiz Game</h1>
+    <div id="quizBox">
+      <img id="questionImage" src="/img/Zubby.png" alt="img"/>
+      <div class="question" id="question">Question here</div>
+      <div class="options" id="options">Options</div>
+      <div class="buttons">
+        <button onclick="submitAnswer()">Submit</button>
+        <button onclick="nextQuestion()">Next</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <div id="scoreBox"></div>
+  </div>
+
+  <a href="register.html" class="btn btn-success text-center my-4 w-50 register-btn"> Start Learning!</a>
 
 
 
 
 
+  <script>
+    const quizQuestions = [
+      {
+        question: "Which is a farm animal?",
+        options: ['Lion',  'Wolf', 'Cow', 'Monkey'],
+        answer: 'Cow',
+      },
+      {
+        question: "Which is not a branch of agriculture?",
+        options: ["Agronomy", "Horticulture", "Animal Husbandary", "Animal bathing"],
+        answer: "Animal bathing",
+      },
+      {
+        question: "Which is not a growth stage in plants?",
+        options: ["Imprisonment", "Juvenile", "Infancy", "Adulthood"],
+        answer: "Imprisonment",
+      }
+    ];
+
+    let currentQuestion = 0;
+    let score = 0;
+
+    function loadQuestion() {
+      const q = quizQuestions[currentQuestion];
+      document.getElementById("question").textContent = (currentQuestion + 1) + ". " + q.question;
+      document.getElementById("questionImage").src = q.image;
+
+      const optionsDiv = document.getElementById("options");
+      optionsDiv.innerHTML = "";
+
+      q.options.forEach((opt) => {
+        optionsDiv.innerHTML += `
+          <label>
+            <input type="radio" name="option" value="${opt}"> ${opt}
+          </label>
+        `;
+      });
+
+      document.getElementById("result").textContent = "";
+    }
+
+    function submitAnswer() {
+      const selected = document.querySelector('input[name="option"]:checked');
+      if (!selected) {
+        alert("Please choose an answer.");
+        return;
+      }
+
+      const answer = selected.value;
+      const correct = quizQuestions[currentQuestion].answer;
+
+      if (answer === correct) {
+        document.getElementById("result").textContent = "✅ Correct!";
+        score++;
+      } else {
+        document.getElementById("result").textContent = "❌ Wrong! Answer: " + correct;
+      }
+    }
+
+    function nextQuestion() {
+      currentQuestion++;
+      if (currentQuestion < quizQuestions.length) {
+        loadQuestion();
+      } else {
+        showScore();
+      }
+    }
+
+    function showScore() {
+      document.getElementById("quizBox").style.display = "none";
+      document.getElementById("scoreBox").style.display = "block";
+      document.getElementById("scoreBox").innerHTML = `
+        🎉 Quiz Completed!<br><br>
+        Your Score: ${score} out of ${quizQuestions.length} Good job! Want to play again?<br><br>
+        <button onclick="restartQuiz()">Play Again</button>
+      `;
+    }
+
+    function restartQuiz() {
+      currentQuestion = 0;
+      score = 0;
+      document.getElementById("scoreBox").style.display = "none";
+      document.getElementById("quizBox").style.display = "block";
+      loadQuestion();
+    }
+
+    // Load the first question on page load
+    loadQuestion();
 
 
-
-
+  </script>
   <script type="module" src="../JS/api.js"></script>
     <script src="../JS/navbar.js"></script>
     <script src="../JS/dashboard.js"></script>
-    <script src="https://cdn.tailwindcss.com"></script>
+   
 </body>
 </html>
 
@@ -77,7 +439,7 @@
     <link rel="stylesheet" href="./CSS/styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <style>
-      @import url('https://fonts.cdnfonts.com/css/poppins');
+     
 
       body {
         font-family: Poppins;
@@ -571,8 +933,8 @@
     </ol>
   </section>
     
-    <!-- Intro Screen -->
-    <div id="intro" >
+    Intro Screen 
+    <div id="intro" > -->
       <!-- <p class="fw-bold">Welcome To AgriKids</p> -->
     </div>
 
@@ -593,4 +955,4 @@
   <script src="./JS/index.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html> -->
+</html> 

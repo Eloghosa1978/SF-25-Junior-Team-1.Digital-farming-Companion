@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrikids Quiz Game</title>
+    <link rel="stylesheet" href="api.css">
+</head>
+<body>
+    <div class="quiz-container">
+    <h1>🌾 Agrikids Quiz Game</h1>
+    <div id="quizBox">
+      <img id="questionImage" src="/img/Zubby.png" alt="img"/>
+      <div class="question" id="question">Question here</div>
+      <div class="options" id="options">Options</div>
+      <div class="buttons">
+        <button onclick="submitAnswer()">Submit</button>
+        <button onclick="nextQuestion()">Next</button>
+      </div>
+      <div id="result"></div>
+    </div>
+    <div id="scoreBox"></div>
+  </div>
+
+  <script src="tq.js"></script>
+
+
+</body>
+</html>
